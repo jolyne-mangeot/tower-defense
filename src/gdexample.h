@@ -1,9 +1,9 @@
 //
-// Created by josur on 03/06/2025.
+// Created by josur on 04/06/2025.
 //
 
-#ifndef TOWER_DEFENSE_H
-#define TOWER_DEFENSE_H
+#ifndef GDEXAMPLE_H
+#define GDEXAMPLE_H
 
 #include <godot_cpp/classes/sprite2d.hpp>
 
@@ -27,4 +27,4 @@ namespace godot {
 
 }
 
-#endif //TOWER_DEFENSE_H
+#endif
