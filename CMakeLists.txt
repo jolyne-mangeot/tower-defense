@@ -2084,5 +2084,7 @@ add_executable(tower_defense_godot
         godot-cpp/test/src/register_types.cpp
         godot-cpp/test/src/register_types.h
         godot-cpp/test/src/tests.h
-        src/tower-defense.cpp
-        src/tower-defense.h)
+        src/gdexample.cpp
+        src/gdexample.h
+        src/register_types.cpp
+        src/register_types.h)

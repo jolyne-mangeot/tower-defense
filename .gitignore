@@ -1,4 +1,5 @@
-godot-cpp/
+/godot-cpp/
+
 
 # Prerequisites
 *.d
@@ -32,3 +33,5 @@ godot-cpp/
 *.exe
 *.out
 *.app
+/cmake-build-debug/
+/demo/.godot/
