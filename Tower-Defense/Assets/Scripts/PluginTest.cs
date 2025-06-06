@@ -9,6 +9,6 @@ public class PluginTest : MonoBehaviour
     void Start()
     {
         int result = Multiply(2, 3);
-        Debug.Log("2 * 3 = " + result); // Devrait afficher : "2 * 3 = 5"
+        Debug.Log("2 * 3 = " + result);
     }
 }
