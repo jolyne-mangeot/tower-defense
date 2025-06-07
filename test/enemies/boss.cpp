@@ -8,7 +8,7 @@ using std::endl;
 Boss::Boss(IMovementStrategy* strategy)
     : Enemy(strategy) {
         this->setHp(250);
-        this->setSpeed(120);
+        this->setSpeed(120.0f);
         this->revenue = static_cast<int>(this->revenue * 2.0f);
 
         cout<<"Je suis un boss"<<endl;
