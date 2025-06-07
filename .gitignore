@@ -29,6 +29,7 @@
 *.exe
 *.out
 *.app
+Library/*
 
 !Tower-Defense/
 Tower-Defense/*
