@@ -7,12 +7,12 @@ set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
 add_executable(main
         main.cpp
-        entities/enemies/Basic_enemy.cpp
+        Basic_enemy.cpp
 )
 
 add_library(plugin-unity SHARED
-        entities/enemies/Basic_enemy.cpp
-        entities/enemies/Basic_enemy_exposed.cpp
+        Basic_enemy.cpp
+        Basic_enemy_exposed.cpp
 )
 
 #install(TARGETS plugin-unity DESTINATION Tower-Defense/Assets/Plugins/x86_64)

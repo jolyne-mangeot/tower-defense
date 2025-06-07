@@ -19,10 +19,7 @@
     <option name="reloaded" value="true" />
   </component>
   <component name="CMakeRunConfigurationManager">
-    <generated>
-      <config projectName="plugin-unity" targetName="main" />
-      <config projectName="plugin-unity" targetName="plugin-unity" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -31,11 +28,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2d87052-6c93-4a52-978f-cf2b3f5c1bb3" name="Changes" comment="progress: add basic_enemy.cpp, Basic_enemy.hpp and Basic_enemy_exposed.cpp for unity interface for class tests in framework">
-      <change afterPath="$PROJECT_DIR$/game/levels/level_1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/Towers_factory/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entities/enemies/Basic_enemy_exposed.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/entities/enemies/Basic_enemy_exposed.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test-for-unity-import/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/Basic_enemy.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/Basic_enemy.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/Basic_enemy_exposed.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test-for-unity-import/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.hpp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +86,12 @@
   <component name="Make.Settings">
     <option name="path" value="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\bin\Hostx64\x64\nmake.exe" />
   </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2025" />
+    <option name="minorVersion" value="1.2" />
+    <option name="productBranch" value="Classic" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
@@ -124,25 +134,22 @@
       <recent name="C:\Users\josur\OneDrive\Documents\Vaults\Plateforme\Perso Hors-ligne\tower-defense-godot\Tower-Defense\Assets\Plugins" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Anwender\OneDrive\Documents\Vaults\Plateforme\Perso Hors-ligne\tower-defense-godot\Test-for-unity-import" />
       <recent name="C:\Users\Anwender\OneDrive\Documents\Vaults\Plateforme\Perso Hors-ligne\tower-defense-godot\game" />
       <recent name="C:\Users\josur\OneDrive\Documents\Vaults\Plateforme\Perso Hors-ligne\tower-defense-godot" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.plugin-unity">
-    <configuration name="main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="plugin-unity" TARGET_NAME="main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="plugin-unity" RUN_TARGET_NAME="main">
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="13.3" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="13.3" TARGET_NAME="13.3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="13.3" RUN_TARGET_NAME="13.3">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="plugin-unity" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="plugin-unity" TARGET_NAME="plugin-unity" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="CMake Application.main" />
-      <item itemvalue="CMake Application.plugin-unity" />
-    </list>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -160,6 +167,7 @@
       <workItem from="1749287611468" duration="709000" />
       <workItem from="1749289533556" duration="80000" />
       <workItem from="1749312557572" duration="1900000" />
+      <workItem from="1749317442107" duration="379000" />
     </task>
     <task id="LOCAL-00001" summary="progress: add unity assets folders and base compilation for dll integration">
       <option name="closed" value="true" />
