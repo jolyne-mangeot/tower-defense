@@ -31,6 +31,12 @@
 *.app
 *.meta
 
+.idea
+
+*/.vscode
+
+*/cmake-build-debug
+
 !Tower-Defense/
 Tower-Defense/*
 
