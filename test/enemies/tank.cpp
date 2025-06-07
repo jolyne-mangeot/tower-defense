@@ -9,7 +9,7 @@ Tank::Tank(IMovementStrategy* strategy)
     : Enemy(strategy) {
         this->setHp(150);
         this->setSpeed(80);
-        this->revenue = static_cast<int>(this-revenue * 1.2f);
+        this->revenue = static_cast<int>(this->revenue * 1.2f);
 
         cout<<"Je suis un tank"<<endl;
         cout<<"J'ai "<<this->getHp()<<" HP"<<endl;
