@@ -66,5 +66,6 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
     },
-    "dotnet.defaultSolution": "Tower-Defense.sln"
+    "dotnet.defaultSolution": "Tower-Defense.sln",
+    "cmake.sourceDirectory": "C:/Users/Adeline/Documents/C++/tower-defense/test"
 }

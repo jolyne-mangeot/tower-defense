@@ -9,6 +9,7 @@ class IMovementStrategy;
 class Enemy {
 public:
     Enemy(IMovementStrategy* movement);
+    ~Enemy();
     int revenue{80};
     virtual void move();
     void getDamage(int damage);

@@ -41,6 +41,7 @@ Tower-Defense/Assets/*
 !Tower-Defense/Assets/Plugins/
 !Tower-Defense/Assets/Scripts/
 
+build/*
 #Tower-Defense/Library/*
 #Tower-Defense/Logs/*
 #Tower-Defense/Packages/*
