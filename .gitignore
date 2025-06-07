@@ -29,6 +29,7 @@
 *.exe
 *.out
 *.app
+*.meta
 
 !Tower-Defense/
 Tower-Defense/*
@@ -39,18 +40,6 @@ Tower-Defense/Assets/*
 
 !Tower-Defense/Assets/Plugins/
 !Tower-Defense/Assets/Scripts/
-
-#Tower-Defense/Library/*
-#Tower-Defense/Logs/*
-#Tower-Defense/Packages/*
-#Tower-Defense/ProjectSettings/*
-#Tower-Defense/UserSettings/*
-#Tower-Defense/*.sln
-#Tower-Defense/*.csproj
-#
-#Tower-Defense/Assets/Scenes/*
-#Tower-Defense/Assets/Settings/*
-#Tower-Defense/Assets/TutorialInfo/*
-#Tower-Defense/Assets/*.meta
-#Tower-Defense/Assets/*.asset
-#Tower-Defense/Assets/*.inputactions
+!Tower-Defense/Assets/Models/
+!Tower-Defense/Assets/Prefabs/
+!Tower-Defense/Assets/Scenes/
