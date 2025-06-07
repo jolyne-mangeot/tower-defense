@@ -22,8 +22,8 @@ extern "C" {
         if (enemy) enemy->TakeDamage(dmg);
     }
 
-    __declspec(dllexport) bool EnemyIsDead(Enemy* enemy) {
-        return enemy ? enemy->IsDead() : true;
+    __declspec(dllexport) int EnemyIsDead(Enemy* enemy) {
+        return enemy ? enemy->IsDead() : 1;
     }
 
     __declspec(dllexport) int EnemyGetReward(Enemy* enemy) {

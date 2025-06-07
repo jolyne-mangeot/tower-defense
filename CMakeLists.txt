@@ -11,7 +11,8 @@ add_executable(main
 )
 
 add_library(plugin-unity SHARED
-        test/test.cpp
         entities/enemies/Basic_enemy.cpp
         entities/enemies/Basic_enemy_exposed.cpp
 )
+
+#install(TARGETS plugin-unity DESTINATION Tower-Defense/Assets/Plugins/x86_64)
