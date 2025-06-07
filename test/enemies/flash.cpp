@@ -8,8 +8,8 @@ using std::endl;
 
 Flash::Flash(IMovementStrategy* strategy)
     : Enemy(strategy) {
-        this->setHp(80);
-        this->setSpeed(150);
+        this->setHp(80.0f);
+        this->setSpeed(150.0f);
         this->revenue = static_cast<int>(this->revenue * 0.8f); 
 
         cout<<"Je suis rapide !"<<endl;

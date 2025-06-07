@@ -57,10 +57,12 @@
         "Temp/": true
     },
     "files.associations": {
+        "*.dbclient-js": "javascript",
         "*.asset": "yaml",
         "*.meta": "yaml",
         "*.prefab": "yaml",
         "*.unity": "yaml",
+        "iostream": "cpp"
     },
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {

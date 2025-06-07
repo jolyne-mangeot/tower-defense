@@ -38,8 +38,8 @@ float Enemy::getHp()
 }
 
 void Enemy::setHp(float percent)
-{
-    this->health_points *= static_cast<int>(percent/100.0f);
+{   
+    this->health_points = this->health_points * (percent/100.0f);
 }
 
 float Enemy::getSpeed()
@@ -49,7 +49,7 @@ float Enemy::getSpeed()
 
 void Enemy::setSpeed(float percent)
 {
-    this->speed *= (percent/100.0f);
+    this->speed = this->speed * (percent/100.0f);
 }
 
 int Enemy::getX()
