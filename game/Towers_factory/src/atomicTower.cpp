@@ -1,4 +1,5 @@
 #include "AtomicTower.h"
+#include "enemy.h"
 
 using std::cout;
 using std::endl;
@@ -33,11 +34,14 @@ void AtomicTower::buy()
 
 void AtomicTower::attack(Enemy *enemy)
 {
-    cout << "AtomicTower attaque avec une la puissance de Shadow\n";
+    std::cout << "AtomicTower attaque avec la puissance de Shadow\n";
+    enemy->takeDamage(80);
+
     hit_counter++;
     if (hit_counter >= 3)
     {
         special_ready = true;
+        std::cout << "L'attaque spéciale est maintenant prête !\n";
     }
 }
 

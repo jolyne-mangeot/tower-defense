@@ -28,7 +28,7 @@ void Enemy::move()
         movement_strategy->move(*this);
 }
 
-void Enemy::getDamage(const int damage) {
+void Enemy::takeDamage(const int damage) {
     this->health_points -= damage;
 }
 
