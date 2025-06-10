@@ -12,7 +12,7 @@ public:
     ~Enemy();
     int revenue{80};
     virtual void move();
-    void getDamage(int damage);
+    void takeDamage(int damage);
     float getHp();
     void setHp(float percent);
     float getSpeed();

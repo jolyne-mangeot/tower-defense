@@ -1,4 +1,5 @@
 #include "crazyTower.h"
+#include "enemy.h"
 
 using std::cout;
 using std::endl;
@@ -18,6 +19,7 @@ CrazyTower::CrazyTower()
 
 void CrazyTower::attack(Enemy *enemy)
 {
+    enemy->takeDamage(40);
     cout << "CrazyTower attaque de manière imprévisible!\n";
 }
 
