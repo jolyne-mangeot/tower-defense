@@ -37,15 +37,4 @@
 
 */cmake-build-debug
 
-!Tower-Defense/
-Tower-Defense/*
-
-!Tower-Defense/Assets/
-Tower-Defense/Assets/*
-
-
-!Tower-Defense/Assets/Plugins/
-!Tower-Defense/Assets/Scripts/
-!Tower-Defense/Assets/Models/
-!Tower-Defense/Assets/Prefabs/
-!Tower-Defense/Assets/Scenes/
+Tower-Defense
