@@ -10,10 +10,13 @@ Flash::Flash(IMovementStrategy* strategy)
     : Enemy(strategy) {
         this->setHp(80.0f);
         this->setSpeed(150.0f);
-        this->revenue = static_cast<int>(this->revenue * 0.8f); 
+        this->revenue = static_cast<int>(this->revenue * 0.8f);
+        cout<<"Constructeur Flash"<<endl;     
+}
 
-        cout<<"Je suis rapide !"<<endl;
-        cout<<"J'ai "<<this->getHp()<<" HP"<<endl;
-        cout<<this->getSpeed()<<" de vitesse"<<endl;
-        cout<<"Je rapporte : "<<this->revenue<<" gold"<<endl;
+void Flash::presentYourself() {
+    cout<<"Je suis rapide !"<<endl;
+    cout<<"J'ai "<<this->getHp()<<" HP"<<endl;
+    cout<<this->getSpeed()<<" de vitesse"<<endl;
+    cout<<"Je rapporte : "<<this->revenue<<" gold"<<endl;
 }

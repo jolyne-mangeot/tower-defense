@@ -12,20 +12,17 @@ using std::endl;
 
 Enemy::Enemy(IMovementStrategy* movement) : movement_strategy(movement)
 {
-    cout<<"Je suis un ennemi classique"<<endl;
-    cout<<"J'ai "<<this->getHp()<<" HP"<<endl;
-    cout<<this->getSpeed()<<" de vitesse"<<endl;
-    cout<<"Je rapporte : "<<this->revenue<<" gold"<<endl;
+    cout<<"Constructeur Enemy"<<endl;
 }
 
 Enemy::~Enemy() {
     delete movement_strategy;
 }
 
-void Enemy::move()
+void Enemy::move(std::array<int, 2>& checkpoint)
 {
     if (movement_strategy)
-        movement_strategy->move(*this);
+        movement_strategy->move(*this, checkpoint);
 }
 
 void Enemy::takeDamage(const int damage) {
@@ -70,4 +67,17 @@ int Enemy::getY()
 void Enemy::setY(int y_movement)
 {
     this->y += y_movement;
+}
+
+void Enemy::setMovement(IMovementStrategy *new_movement_strategy)
+{
+    this->movement_strategy = new_movement_strategy;
+}
+
+void Enemy::presentYourself()
+{
+    cout<<"Je suis un ennemi classique"<<endl;
+    cout<<"J'ai "<<this->getHp()<<" HP"<<endl;
+    cout<<this->getSpeed()<<" de vitesse"<<endl;
+    cout<<"Je rapporte : "<<this->revenue<<" gold"<<endl;
 }

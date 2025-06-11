@@ -10,9 +10,12 @@ Boss::Boss(IMovementStrategy* strategy)
         this->setHp(250);
         this->setSpeed(120.0f);
         this->revenue = static_cast<int>(this->revenue * 2.0f);
+        cout<<"Constructeur Boss"<<endl;
+}
 
-        cout<<"Je suis un boss"<<endl;
-        cout<<"J'ai "<<this->getHp()<<" HP"<<endl;
-        cout<<this->getSpeed()<<" de vitesse"<<endl;
-        cout<<"Je rapporte : "<<this->revenue<<" gold"<<endl;
+void Boss::presentYourself() {
+    cout<<"Je suis un boss"<<endl;
+    cout<<"J'ai "<<this->getHp()<<" HP"<<endl;
+    cout<<this->getSpeed()<<" de vitesse"<<endl;
+    cout<<"Je rapporte : "<<this->revenue<<" gold"<<endl;
 }
