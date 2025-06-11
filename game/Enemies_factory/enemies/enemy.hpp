@@ -30,6 +30,7 @@ private:
     int x{0}, y{0};
     float speed{50.0f}; // pixel per frame
     IMovementStrategy* movement_strategy;
+    void changeDirection(std::array<int, 2> checkpoint);
 };
 
 #endif //ENEMY_H

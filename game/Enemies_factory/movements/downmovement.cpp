@@ -10,5 +10,5 @@ using std::endl;
 
 void DownMovement::move(Enemy& enemy, const std::array<int, 2>& checkpoint) {
     enemy.setY(static_cast<int>(enemy.getSpeed()));
-    cout<<"LEFTMOVEMENT : L'ennemi se déplace x : "<<enemy.getX()<<" y : "<<enemy.getY()<<endl;
+    cout<<"DOWNMOVEMENT : L'ennemi se déplace x : "<<enemy.getX()<<" y : "<<enemy.getY()<<endl;
 }

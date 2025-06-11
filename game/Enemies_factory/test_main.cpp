@@ -8,7 +8,12 @@
 #include "enemyfactories/tankfactory.hpp"
 #include "enemyfactories/flashfactory.hpp"
 #include "enemyfactories/bossfactory.hpp"
-#include "movements/straightmovement.hpp"
+// #include "movements/straightmovement.hpp"
+#include "movements/upmovement.hpp"
+#include "movements/downmovement.hpp"
+#include "movements/leftmovement.hpp"
+#include "movements/rightmovement.hpp"
+
 #include <array>
 #include <vector>
 
@@ -24,16 +29,16 @@ int main(int argc, char const *argv[])
     EnemyFactory* tank_factory = new TankFactory();
 
     // cout<<"### Je créé un ennemi normal : ###"<<endl;
-    Enemy* standard = enemy_factory->createEnemy(new StraightMovement);
+    Enemy* standard = enemy_factory->createEnemy(new UpMovement);
     // cout<<endl<<endl;
     // cout<<"### Je créé un ennemi rapide : ###"<<endl;
-    Enemy* flash = flash_factory->createEnemy(new StraightMovement);
+    Enemy* flash = flash_factory->createEnemy(new UpMovement);
     // cout<<endl<<endl;
     // cout<<"### Je créé un tank : ###"<<endl;
-    Enemy* tank = tank_factory->createEnemy(new StraightMovement);
+    Enemy* tank = tank_factory->createEnemy(new UpMovement);
     // cout<<endl<<endl;
     // cout<<"### Je créé un boss : ###"<<endl;
-    Enemy* boss = boss_factory->createEnemy(new StraightMovement);
+    Enemy* boss = boss_factory->createEnemy(new UpMovement);
     
     cout<<endl;
     boss->presentYourself();
@@ -65,9 +70,16 @@ int main(int argc, char const *argv[])
     cout<<"checkpoint visé x : "<<checkpoints[2][0]<<" y : "<<checkpoints[2][1]<<endl;
     cout<<"enemi x : "<<standard->getX()<<" enemi y : "<<standard->getY()<<endl;
     // cout<<"Je vérifie le point y de départ de l'ennemi : "<<standard->getY()<<endl;
-    while(checkpoints[0][1] > standard->getY()) {
-        standard->move(checkpoints[2]);
+    int count{0};
+    for (std::array<int,2> actual_checkpoint : checkpoints) {
+        cout<<"\tactual checkpoint : "<<actual_checkpoint[0]<<" "<<actual_checkpoint[1]<<endl;
+        while(actual_checkpoint[0] != standard->getX() || actual_checkpoint[1] != standard->getY() && count <10) {
+            standard->move(actual_checkpoint);
+            count++;
+        }
+
     }
+   
     
 
     // enemy_f<<endlactory = new EnemyFactory;

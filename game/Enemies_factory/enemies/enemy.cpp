@@ -5,6 +5,10 @@
 
 #include "enemy.hpp"
 #include "../movements/imovementstrategy.hpp"
+#include "../movements/upmovement.hpp"
+#include "../movements/downmovement.hpp"
+#include "../movements/leftmovement.hpp"
+#include "../movements/rightmovement.hpp"
 
 
 using std::cout;
@@ -21,6 +25,7 @@ Enemy::~Enemy() {
 
 void Enemy::move(std::array<int, 2>& checkpoint)
 {
+    changeDirection(checkpoint);
     if (movement_strategy)
         movement_strategy->move(*this, checkpoint);
 }
@@ -80,4 +85,17 @@ void Enemy::presentYourself()
     cout<<"J'ai "<<this->getHp()<<" HP"<<endl;
     cout<<this->getSpeed()<<" de vitesse"<<endl;
     cout<<"Je rapporte : "<<this->revenue<<" gold"<<endl;
+}
+
+void Enemy::changeDirection(std::array<int, 2> checkpoint)
+{
+    if (checkpoint[0] <= this->x) {
+        this->movement_strategy = new LeftMovement;
+    } else if (checkpoint[0] >= this->x) {
+        this->movement_strategy = new RightMovement;
+    } else if (checkpoint[1] <= this->y) {
+        this->movement_strategy = new UpMovement;
+    } else if (checkpoint[1] >= this->y) {
+        this->movement_strategy = new DownMovement;
+    }
 }
