@@ -10,9 +10,12 @@ Tank::Tank(IMovementStrategy* strategy)
         this->setHp(150.0f);
         this->setSpeed(80.0f);
         this->revenue = static_cast<int>(this->revenue * 1.2f);
+        cout<<"Constructeur Tank"<<endl;
+}
 
-        cout<<"Je suis un tank"<<endl;
-        cout<<"J'ai "<<this->getHp()<<" HP"<<endl;
-        cout<<this->getSpeed()<<" de vitesse"<<endl;
-        cout<<"Je rapporte : "<<this->revenue<<" gold"<<endl;
+void Tank::presentYourself() {
+    cout<<"Je suis un tank"<<endl;
+    cout<<"J'ai "<<this->getHp()<<" HP"<<endl;
+    cout<<this->getSpeed()<<" de vitesse"<<endl;
+    cout<<"Je rapporte : "<<this->revenue<<" gold"<<endl;
 }

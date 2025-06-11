@@ -6,6 +6,7 @@
 class Tank : public Enemy {
 public:
     Tank(IMovementStrategy* strategy);
+    void presentYourself();
 };
 
 #endif
