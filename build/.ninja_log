@@ -1,0 +1,27 @@
+# ninja log v6
+32	162	7709958059440453	CMakeFiles/TestExecutable.dir/movements/straightmovement.cpp.obj	b8dbb77048fc6ecb
+38	172	7709958059489321	CMakeFiles/TestExecutable.dir/enemyfactories/enemyfactory.cpp.obj	e7814077eb1b87c8
+10	473	7709958059191055	CMakeFiles/TestExecutable.dir/enemies/enemy.cpp.obj	2ff231fadb445fa3
+15	496	7709958059261639	CMakeFiles/TestExecutable.dir/enemies/tank.cpp.obj	ee38d5cd96d18adf
+21	499	7709958059315385	CMakeFiles/TestExecutable.dir/enemies/flash.cpp.obj	a001380b05e0eedb
+27	513	7709958059359811	CMakeFiles/TestExecutable.dir/enemies/boss.cpp.obj	a5ebcd9c29e3578f
+4	523	7709958059025896	CMakeFiles/TestExecutable.dir/test_main.cpp.obj	f817392255bde75e
+540	694	7709958064505722	TestExecutable.exe	b35056efd470d4d8
+19	591	7709961219462013	CMakeFiles/TestExecutable.dir/enemies/tank.cpp.obj	ee38d5cd96d18adf
+26	593	7709961219536667	CMakeFiles/TestExecutable.dir/enemies/flash.cpp.obj	a001380b05e0eedb
+33	621	7709961219576279	CMakeFiles/TestExecutable.dir/enemies/boss.cpp.obj	a5ebcd9c29e3578f
+14	545	7709961472721306	CMakeFiles/TestExecutable.dir/enemies/enemy.cpp.obj	2ff231fadb445fa3
+546	741	7709961478032229	TestExecutable.exe	b35056efd470d4d8
+14	548	7709962462241149	CMakeFiles/TestExecutable.dir/enemies/enemy.cpp.obj	2ff231fadb445fa3
+550	745	7709962467598898	TestExecutable.exe	b35056efd470d4d8
+23	3221	7712492782002206	CMakeFiles/TestExecutable.dir/enemies/enemy.cpp.obj	2ff231fadb445fa3
+3222	3801	7712492813931192	TestExecutable.exe	b35056efd470d4d8
+14	593	7712498761365768	CMakeFiles/TestExecutable.dir/enemies/enemy.cpp.obj	2ff231fadb445fa3
+36	614	7712498761583887	CMakeFiles/TestExecutable.dir/enemies/boss.cpp.obj	a5ebcd9c29e3578f
+29	615	7712498761480137	CMakeFiles/TestExecutable.dir/enemies/flash.cpp.obj	a001380b05e0eedb
+22	638	7712498761446944	CMakeFiles/TestExecutable.dir/enemies/tank.cpp.obj	ee38d5cd96d18adf
+639	840	7712498767593608	TestExecutable.exe	b35056efd470d4d8
+11	1017	7712507456993501	CMakeFiles/TestExecutable.dir/movements/straightmovement.cpp.obj	b8dbb77048fc6ecb
+1018	1488	7712507467085497	TestExecutable.exe	b35056efd470d4d8
+12	589	7712509677155779	CMakeFiles/TestExecutable.dir/test_main.cpp.obj	f817392255bde75e
+590	794	7712509682838818	TestExecutable.exe	b35056efd470d4d8
