@@ -10,7 +10,8 @@ using std::endl;
 
 void LeftMovement::move(Enemy& enemy, const std::array<int, 2>& checkpoint) {
     if (enemy.getX() - enemy.getSpeed() < checkpoint[0]) {
-        enemy.setSpeed(abs(enemy.getX()-enemy.getSpeed()-checkpoint[0]));
+        // enemy.setSpeed(abs(enemy.getX()-enemy.getSpeed()-checkpoint[0]));
+        enemy.setSpeed(abs(checkpoint[0] - enemy.getX()));
     }
 
     enemy.setX(static_cast<int>(enemy.getSpeed())*-1);
