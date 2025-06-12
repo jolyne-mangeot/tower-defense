@@ -7,6 +7,7 @@
 class Flash : public Enemy {
 public:
     Flash(IMovementStrategy* strategy);
+    void presentYourself();
 };
 
 

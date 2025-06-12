@@ -7,6 +7,7 @@
 class Boss : public Enemy {
 public:
     Boss(IMovementStrategy* strategy);
+    void presentYourself() override;
 };
 
 #endif
