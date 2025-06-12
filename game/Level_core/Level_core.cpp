@@ -4,6 +4,8 @@
 
 #include "Level_core.hpp"
 
+#include "tower.h"
+
 Level_core::Level_core(const string &level_json_path) {
 
     ifstream level_json_file(level_json_path);
@@ -34,7 +36,7 @@ Level_core::Level_core(const string &level_json_path) {
     for (int i = 0; i < number_of_waves; i++) {
         basic_json<> wave_data = level_data.at("wave_" + to_string(i + 1));
 
-        level_waves wave;
+        level_wave_info wave;
 
         wave.number_of_enemies = wave_data.at("spawn_amount");
         wave.spawn_interval = wave_data.at("spawn_interval");
@@ -44,5 +46,63 @@ Level_core::Level_core(const string &level_json_path) {
             wave.spawn_order.push_back(wave_data.at("spawn_order").at(to_string(j + 1)));
         }
         this->waves.push_back(wave);
+    }
+}
+
+void Level_core::generate_pointers(const shared_ptr<Level_core>& self_pointer) {
+
+    this->factories_shared_ptrs = {
+        make_shared<EnemyFactory>(),
+        make_shared<FlashFactory>(),
+        make_shared<TankFactory>(),
+        make_shared<BossFactory>()
+    };
+
+    this->factories_weak_ptrs = {
+        factories_shared_ptrs.basic_enemy_factory,
+        factories_shared_ptrs.flash_enemy_factory,
+        factories_shared_ptrs.tank_enemy_factory,
+        factories_shared_ptrs.boss_factory
+    };
+
+    tower_shared_ptr.reserve(this->number_of_turrets);
+    for (int i = 0; i < this->number_of_turrets; i++) {
+        shared_ptr<Tower> tower_ptr = make_shared<Tower>(this->turrets_coordinates.at(i));
+        tower_shared_ptr.push_back(tower_ptr);
+    }
+}
+
+int Level_core::wave_is_running() const {
+    if (this->current_wave_pointer->wave_is_running()) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+weak_ptr<Level_wave> Level_core::instantiate_wave() {
+    if (this->current_wave_id > 1) {
+        this->current_wave_pointer->~Level_wave();
+        this->current_wave_pointer.reset();
+    }
+    this->current_wave_pointer = make_shared<Level_wave>(
+        this->waves.at(current_wave_id - 1),
+        this->self_pointer,
+        this->user_data_ptr,
+        this->factories_weak_ptrs
+        );
+    return current_wave_pointer;
+}
+
+Level_core::~Level_core() {
+    this->current_wave_pointer.reset();
+
+    this->factories_shared_ptrs.basic_enemy_factory.reset();
+    this->factories_shared_ptrs.flash_enemy_factory.reset();
+    this->factories_shared_ptrs.tank_enemy_factory.reset();
+    this->factories_shared_ptrs.boss_factory.reset();
+
+    for (shared_ptr<Tower> tower_ptr : tower_shared_ptr) {
+        tower_shared_ptr.reset();
     }
 }

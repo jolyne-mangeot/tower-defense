@@ -2,19 +2,22 @@
 #ifndef TOWER_H
 #define TOWER_H
 
+#include "level_utils.hpp"
+
 class Enemy; // Forward declaration
 
 class Tower
 {
 protected:
     static int spent_money_count;
-    int damage;
-    int tower_level;
-    int cost;
-    float shot_speed;
-    float perimeter;
-    int hit_counter;
-    bool special_ready;
+    int tower_level{0};
+    int cost{150};
+    int damage{0};
+    float perimeter{0};
+    int hit_speed{0};
+    int hit_cooldown{0};
+    int hit_counter{0};
+    bool special_ready{false};
 
 public:
     virtual void attack(Enemy *enemy);

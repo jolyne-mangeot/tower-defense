@@ -11,7 +11,7 @@ AtomicTower::AtomicTower()
 {
     damage = 80;
     cost = base_cost; // see in buy()
-    shot_speed = 1.5f;
+    hit_speed = 1.5f;
     perimeter = 5.0f;
     hit_counter = 0;
     special_ready = false;
@@ -58,11 +58,11 @@ void AtomicTower::upgrade()
 {
 
     damage = static_cast<int>(damage * 1.2f);
-    shot_speed *= 1.1f;
+    hit_speed *= 1.1f;
     perimeter += 1.0f;
 
     cost = static_cast<int>(cost * 1.5f);
 
-    cout << "AtomicTower améliorée ! Dégâts: " << damage << ", Vitesse: " << shot_speed
+    cout << "AtomicTower améliorée ! Dégâts: " << damage << ", Vitesse: " << hit_speed
          << ", Périmètre: " << perimeter << ", Nouveau coût: " << cost << endl;
 }

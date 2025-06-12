@@ -13,15 +13,10 @@
 #include "json.hpp"
 #include <fstream>
 #include <array>
+#include <memory>
 
 using namespace std;
 using namespace nlohmann;
-
-typedef struct {
-    int number_of_enemies;
-    int spawn_interval;
-    vector<int> spawn_order;
-} level_waves;
 
 #if defined(MAIN_CPP) & !defined(MAIN_INCLUDED)
 #define MAIN_INCLUDED
@@ -30,9 +25,5 @@ typedef struct {
 
 #endif
 
-#if defined(LEVEL_CORE_HPP) & !defined(LEVEL_CORE_INCLUDED)
-#define LEVEL_CORE_INCLUDED
-
-#endif
 
 #endif //UTILS_HPP
