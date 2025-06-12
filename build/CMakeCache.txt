@@ -248,7 +248,7 @@ Test_BINARY_DIR:STATIC=C:/Users/Adeline/Documents/C++/tower-defense/build
 Test_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-Test_SOURCE_DIR:STATIC=C:/Users/Adeline/Documents/C++/tower-defense/test
+Test_SOURCE_DIR:STATIC=C:/Users/Adeline/Documents/C++/tower-defense
 
 
 ########################
@@ -337,7 +337,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=C:/Users/Adeline/Documents/C++/tower-defense/test
+CMAKE_HOME_DIRECTORY:INTERNAL=C:/Users/Adeline/Documents/C++/tower-defense
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //Name of CMakeLists files to read

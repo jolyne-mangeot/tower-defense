@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/Adeline/Documents/C++/tower-defense/test"
+			"value" : "C:/Users/Adeline/Documents/C++/tower-defense"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1319,7 +1319,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Adeline/Documents/C++/tower-defense/test"
+			"value" : "C:/Users/Adeline/Documents/C++/tower-defense"
 		}
 	],
 	"kind" : "cache",

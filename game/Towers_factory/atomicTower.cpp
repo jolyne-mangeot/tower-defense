@@ -1,5 +1,6 @@
 #include "AtomicTower.h"
-#include "enemy.h"
+// #include "enemy.h"
+#include "../Enemies_factory/enemies/enemy.hpp"
 
 using std::cout;
 using std::endl;
@@ -11,8 +12,9 @@ AtomicTower::AtomicTower()
 {
     damage = 80;
     cost = base_cost; // see in buy()
-    hit_speed = 1.5f;
-    perimeter = 5.0f;
+    shot_speed = 1.5f;
+    // perimeter = 5.0f;
+    perimeter = 20.0f;
     hit_counter = 0;
     special_ready = false;
 }
@@ -34,15 +36,24 @@ void AtomicTower::buy()
 
 void AtomicTower::attack(Enemy *enemy)
 {
-    std::cout << "AtomicTower attaque avec la puissance de Shadow\n";
-    enemy->takeDamage(80);
 
-    hit_counter++;
-    if (hit_counter >= 3)
+    if (isInRange(enemy)) // observer should take care of it to activate tower and then attack
     {
-        special_ready = true;
-        std::cout << "L'attaque spéciale est maintenant prête !\n";
+        std::cout << "\t\tBOOM Déclenchement attaque Tour ATOMIC.\n";
+        enemy->takeDamage(this->damage);
+        std::cout<<"\t\tHP enemy : "<<enemy->getHp()<<endl;
+        hit_counter++;
+        if (hit_counter >= 3)
+        {
+            special_ready = true;
+            std::cout << "\t\tL'attaque spéciale est maintenant prête !\n";
+        }
     }
+
+    // std::cout << "AtomicTower attaque avec la puissance de Shadow\n";
+    // enemy->takeDamage(80);
+
+   
 }
 
 void AtomicTower::special_attack(Enemy *enemy)
@@ -58,11 +69,11 @@ void AtomicTower::upgrade()
 {
 
     damage = static_cast<int>(damage * 1.2f);
-    hit_speed *= 1.1f;
+    shot_speed *= 1.1f;
     perimeter += 1.0f;
 
     cost = static_cast<int>(cost * 1.5f);
 
-    cout << "AtomicTower améliorée ! Dégâts: " << damage << ", Vitesse: " << hit_speed
+    cout << "AtomicTower améliorée ! Dégâts: " << damage << ", Vitesse: " << shot_speed
          << ", Périmètre: " << perimeter << ", Nouveau coût: " << cost << endl;
 }

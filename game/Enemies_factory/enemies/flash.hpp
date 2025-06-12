@@ -1,7 +1,8 @@
 #ifndef FLASH_HPP
 #define FLASH_HPP
 
-#include "enemy.hpp"
+// #include "enemy.hpp"
+#include "../enemies/enemy.hpp"
 #include "../movements/imovementstrategy.hpp"
 
 class Flash : public Enemy {

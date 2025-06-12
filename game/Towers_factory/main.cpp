@@ -1,13 +1,82 @@
 #include "TowerFactory.h"
 #include <iostream>
-#include "enemy.h"
+#include "../Enemies_factory/enemyfactories/enemyfactory.hpp"
+#include "../Enemies_factory/enemyfactories/bossfactory.hpp"
+#include "../Enemies_factory/enemyfactories/flashfactory.hpp"
+#include "../Enemies_factory/enemyfactories/tankfactory.hpp"
+#include "../Enemies_factory/movements/upmovement.hpp"
+#include "../Enemies_factory/movements/downmovement.hpp"
+#include "../Enemies_factory/movements/leftmovement.hpp"
+#include "../Enemies_factory/movements/rightmovement.hpp"
+// #include "../Enemies_factory/enemies/enemy.hpp"
+// #include "../Enemies_factory/enemies/boss.hpp"
+// #include "../Enemies_factory/enemies/tank.hpp"
+// #include "../Enemies_factory/enemies/flash.hpp"
 #include <vector>
+#include <iostream>
+
+using std::cout;
+using std::endl;
 
 int main()
 {
     std::cout << "Création d'un ennemi...\n";
-    Enemy *enemy = new Enemy(2.0f, 2.0f);
-    std::cout << "Un ennemi est apparu aux coordonnées (" << enemy->x << ", " << enemy->y << ")\n";
+    // Enemy *enemy = new Enemy(2.0f, 2.0f);
+    EnemyFactory* factory = new EnemyFactory;
+    FlashFactory* flash_Factory = new FlashFactory;
+    TankFactory* tank_factory = new TankFactory;
+
+    Enemy* enemy = factory->createEnemy(new UpMovement);
+    Enemy* flash = flash_Factory->createEnemy(new UpMovement);
+    Enemy* tank = tank_factory->createEnemy(new UpMovement);
+
+    Tower* tower = TowerFactory::createTower(ATOMIC);
+    tower->x = 465;
+    tower->y = 240;
+
+    flash->setHp(400);
+    flash->presentYourself();
+    
+    enemy->presentYourself();
+    
+    std::vector<std::array<int,2>> checkpoints;
+    // for (int i = 0; i < 10; i++) {
+    std::array<int, 2> checkpoint1{450, 50};
+    std::array<int, 2> checkpoint2{450, 250};
+    std::array<int, 2> checkpoint3{150, 250};
+    std::array<int, 2> checkpoint4{150, 250};
+    std::array<int, 2> checkpoint5{550, 250};
+    std::array<int, 2> checkpoint6{550, 850};
+    std::array<int, 2> checkpoint7{550, 250};
+    std::array<int, 2> checkpoint8{480, 250};
+
+    checkpoints.push_back(checkpoint1);
+    checkpoints.push_back(checkpoint2);
+    checkpoints.push_back(checkpoint3);
+    checkpoints.push_back(checkpoint4);
+    checkpoints.push_back(checkpoint5);
+    checkpoints.push_back(checkpoint6);
+    checkpoints.push_back(checkpoint7);
+    checkpoints.push_back(checkpoint8);
+    // }
+    
+    cout<<"Je déplace l'ennemi boss"<<endl;
+    flash->setX(350);
+    // cout<<"checkpoint visé x : "<<checkpoints[2][0]<<" y : "<<checkpoints[2][1]<<endl;
+    cout<<"enemi x : "<<flash->getX()<<" enemi y : "<<flash->getY()<<endl;
+    // cout<<"Je vérifie le point y de départ de l'ennemi : "<<flash->getY()<<endl;
+    int count{0};
+    for (std::array<int,2> actual_checkpoint : checkpoints) {
+        cout<<"\tactual checkpoint : "<<actual_checkpoint[0]<<" "<<actual_checkpoint[1]<<endl;
+        while(actual_checkpoint[0] != flash->getX() || actual_checkpoint[1] != flash->getY()) {
+            
+            flash->move(actual_checkpoint);
+            tower->attack(flash);
+
+            count++;
+        }
+    }
+    std::cout << "Un ennemi est apparu aux coordonnées (" << enemy->getX() << ", " << enemy->getY() << ")\n";
 
     std::vector<Tower *> towers;
     int choix = 0;
@@ -74,7 +143,7 @@ int main()
 
             Tower *tower = towers[idx];
             std::cout << "On regarde si l'ennemi est à portée du viseur...\n";
-            if (tower->isInRange(enemy->x, enemy->y, 0, 0))
+            if (tower->isInRange(enemy))
             {
                 std::cout << "L'ennemi est en portée, on tire !\n";
                 for (int i = 0; i < 3; i++)

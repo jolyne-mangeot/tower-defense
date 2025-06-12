@@ -2,7 +2,7 @@
 #define BOSS_FACTORY_HPP
 
 #include "enemyfactory.hpp"
-#include "boss.hpp"
+#include "../enemies/boss.hpp"
 
 class BossFactory : public EnemyFactory {
 public:
