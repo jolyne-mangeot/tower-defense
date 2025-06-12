@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cmath>
 #include "atomicTower.h"
-#include "enemy.h"
+#include "../Enemies_factory/enemies/enemy.hpp"
 
 using std::cout;
 using std::endl;
@@ -19,8 +19,11 @@ void Tower::buy()
 void Tower::attack(Enemy *enemy)
 
 {
-    std::cout << " Déclenchement attaque Tour normal.\n"
-              << std::endl;
+    if (isInRange(enemy)) // observer should take care of it to activate tower and then attack
+    {
+        std::cout << "\t\tBOOM Déclenchement attaque Tour normal.\n";
+        enemy->takeDamage(this->damage);}
+        std::cout<<"\t\tHP enemy : "<<enemy->getHp()<<endl;
 }
 
 void Tower::special_attack(Enemy *enemy)
@@ -29,9 +32,9 @@ void Tower::special_attack(Enemy *enemy)
               << std::endl;
 }
 
-bool Tower::isInRange(float enemyX, float enemyY, float towerX, float towerY)
+bool Tower::isInRange(Enemy* enemy)
 {
-    return (std::abs(enemyX - towerX) <= perimeter && std::abs(enemyY - towerY) <= perimeter);
+    return (std::abs(enemy->getX() - this->x) <= perimeter && std::abs(enemy->getY() - this->y) <= perimeter);
 }
 
 void Tower::upgrade()

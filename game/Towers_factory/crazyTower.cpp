@@ -1,5 +1,6 @@
 #include "crazyTower.h"
-#include "enemy.h"
+// #include "enemy.h"
+#include "../Enemies_factory/enemies/enemy.hpp"
 
 using std::cout;
 using std::endl;
@@ -12,15 +13,23 @@ CrazyTower::CrazyTower()
     damage = 40;
     cost = base_cost;
     shot_speed = 2.0f;
-    perimeter = 3.5f;
+    // perimeter = 3.5f;
+    perimeter = 50.0f;
     hit_counter = 0;
     special_ready = false;
 }
 
 void CrazyTower::attack(Enemy *enemy)
 {
-    enemy->takeDamage(40);
-    cout << "CrazyTower attaque de manière imprévisible!\n";
+    if (isInRange(enemy)) // observer should take care of it to activate tower and then attack
+    {
+        std::cout << "\t\tBOOM Déclenchement attaque Tour CRAZY.\n";
+        enemy->takeDamage(this->damage);
+        std::cout<<"\t\tHP enemy : "<<enemy->getHp()<<endl;
+    }
+
+    // enemy->takeDamage(40);
+    // cout << "CrazyTower attaque de manière imprévisible!\n";
 }
 
 void CrazyTower::special_attack(Enemy *enemy)

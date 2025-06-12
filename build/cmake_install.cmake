@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Adeline/Documents/C++/tower-defense/test
+# Install script for directory: C:/Users/Adeline/Documents/C++/tower-defense
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
