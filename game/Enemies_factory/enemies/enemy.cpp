@@ -27,9 +27,14 @@ void Enemy::move(std::array<int, 2>& checkpoint)
 {
     float usual_speed = this->speed;
     changeDirection(checkpoint);
-    if (movement_strategy)
+    if (movement_strategy) {
         movement_strategy->move(*this, checkpoint);
-    setSpeed(usual_speed);
+    }
+    
+    if (this->speed != usual_speed) {
+        setSpeed(usual_speed);
+    }
+    
 }
 
 void Enemy::takeDamage(const int damage) {

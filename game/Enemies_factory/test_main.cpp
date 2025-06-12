@@ -65,8 +65,8 @@ int main(int argc, char const *argv[])
     checkpoints.push_back(checkpoint6);
     // }
     
-    cout<<"Je déplace l'ennemi standard"<<endl;
-    boss->setX(450);
+    cout<<"Je déplace l'ennemi boss"<<endl;
+    boss->setX(350);
     // cout<<"checkpoint visé x : "<<checkpoints[2][0]<<" y : "<<checkpoints[2][1]<<endl;
     cout<<"enemi x : "<<boss->getX()<<" enemi y : "<<boss->getY()<<endl;
     // cout<<"Je vérifie le point y de départ de l'ennemi : "<<boss->getY()<<endl;
@@ -78,6 +78,7 @@ int main(int argc, char const *argv[])
             count++;
         }
     }
+
     cout<<"L'ennemi a fini de se déplacer :D"<<endl;
    
     
