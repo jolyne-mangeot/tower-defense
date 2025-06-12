@@ -25,9 +25,11 @@ Enemy::~Enemy() {
 
 void Enemy::move(std::array<int, 2>& checkpoint)
 {
+    float usual_speed = this->speed;
     changeDirection(checkpoint);
     if (movement_strategy)
         movement_strategy->move(*this, checkpoint);
+    setSpeed(usual_speed);
 }
 
 void Enemy::takeDamage(const int damage) {
@@ -49,9 +51,14 @@ float Enemy::getSpeed()
     return this->speed;
 }
 
-void Enemy::setSpeed(float percent)
+void Enemy::initSpeed(float percent)
 {
     this->speed = this->speed * (percent/100.0f);
+}
+
+void Enemy::setSpeed(float new_speed)
+{
+    this->speed = new_speed;
 }
 
 int Enemy::getX()
@@ -89,13 +96,13 @@ void Enemy::presentYourself()
 
 void Enemy::changeDirection(std::array<int, 2> checkpoint)
 {
-    if (checkpoint[0] <= this->x) {
+    if (checkpoint[0] < this->x) {
         this->movement_strategy = new LeftMovement;
-    } else if (checkpoint[0] >= this->x) {
+    } else if (checkpoint[0] > this->x) {
         this->movement_strategy = new RightMovement;
-    } else if (checkpoint[1] <= this->y) {
+    } else if (checkpoint[1] > this->y) {
         this->movement_strategy = new UpMovement;
-    } else if (checkpoint[1] >= this->y) {
+    } else if (checkpoint[1] < this->y) {
         this->movement_strategy = new DownMovement;
     }
 }
