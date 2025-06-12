@@ -16,7 +16,8 @@ public:
     float getHp();
     void setHp(float percent);
     float getSpeed();
-    void setSpeed(float percent);
+    void initSpeed(float percent);
+    void setSpeed(float new_speed);
     int getX();
     void setX(int x_movement);
     int getY();

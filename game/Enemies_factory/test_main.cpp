@@ -41,9 +41,9 @@ int main(int argc, char const *argv[])
     Enemy* boss = boss_factory->createEnemy(new UpMovement);
     
     cout<<endl;
-    boss->presentYourself();
-    tank->presentYourself();
-    flash->presentYourself();
+    // boss->presentYourself();
+    // tank->presentYourself();
+    // flash->presentYourself();
     standard->presentYourself();
 
     cout<<endl<<endl;
@@ -66,19 +66,19 @@ int main(int argc, char const *argv[])
     // }
     
     cout<<"Je déplace l'ennemi standard"<<endl;
-    standard->setX(150);
-    cout<<"checkpoint visé x : "<<checkpoints[2][0]<<" y : "<<checkpoints[2][1]<<endl;
+    standard->setX(450);
+    // cout<<"checkpoint visé x : "<<checkpoints[2][0]<<" y : "<<checkpoints[2][1]<<endl;
     cout<<"enemi x : "<<standard->getX()<<" enemi y : "<<standard->getY()<<endl;
     // cout<<"Je vérifie le point y de départ de l'ennemi : "<<standard->getY()<<endl;
     int count{0};
     for (std::array<int,2> actual_checkpoint : checkpoints) {
         cout<<"\tactual checkpoint : "<<actual_checkpoint[0]<<" "<<actual_checkpoint[1]<<endl;
-        while(actual_checkpoint[0] != standard->getX() || actual_checkpoint[1] != standard->getY() && count <10) {
+        while(actual_checkpoint[0] != standard->getX() || actual_checkpoint[1] != standard->getY()) {
             standard->move(actual_checkpoint);
             count++;
         }
-
     }
+    cout<<"L'ennemi a fini de se déplacer :D"<<endl;
    
     
 
