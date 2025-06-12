@@ -16,7 +16,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "C:/Users/Adeline/Documents/C++/tower-defense/build/CMakeFiles/4.0.2/CMakeSystem.cmake"
+			"path" : "build/CMakeFiles/4.0.2/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -295,7 +295,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "C:/Users/Adeline/Documents/C++/tower-defense/build/CMakeFiles/4.0.2/CMakeCCompiler.cmake"
+			"path" : "build/CMakeFiles/4.0.2/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -549,7 +549,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "C:/Users/Adeline/Documents/C++/tower-defense/build/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake"
+			"path" : "build/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -623,7 +623,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "C:/Users/Adeline/Documents/C++/tower-defense/build/CMakeFiles/4.0.2/CMakeRCCompiler.cmake"
+			"path" : "build/CMakeFiles/4.0.2/CMakeRCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -707,7 +707,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "C:/Users/Adeline/Documents/C++/tower-defense/build/CMakeFiles/4.0.2/CMakeCCompiler.cmake"
+			"path" : "build/CMakeFiles/4.0.2/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -866,7 +866,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "C:/Users/Adeline/Documents/C++/tower-defense/build/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake"
+			"path" : "build/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -918,7 +918,7 @@
 	"paths" : 
 	{
 		"build" : "C:/Users/Adeline/Documents/C++/tower-defense/build",
-		"source" : "C:/Users/Adeline/Documents/C++/tower-defense/test"
+		"source" : "C:/Users/Adeline/Documents/C++/tower-defense"
 	},
 	"version" : 
 	{
