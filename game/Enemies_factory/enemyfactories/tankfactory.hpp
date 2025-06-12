@@ -2,7 +2,7 @@
 #define TANK_FACTORY_HPP
 
 #include "enemyfactory.hpp"
-#include "tank.hpp"
+#include "../enemies/tank.hpp"
 
 class TankFactory : public EnemyFactory {
 public:

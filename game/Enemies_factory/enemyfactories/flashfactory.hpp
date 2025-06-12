@@ -2,7 +2,7 @@
 #define FLASH_FACTORY_HPP
 
 #include "enemyfactory.hpp"
-#include "flash.hpp"
+#include "../enemies/flash.hpp"
 
 class FlashFactory : public EnemyFactory {
 public:
