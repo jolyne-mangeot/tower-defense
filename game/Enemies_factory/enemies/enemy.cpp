@@ -3,7 +3,8 @@
 //
 #include <iostream>
 
-#include "enemy.hpp"
+// #include "enemy.hpp"
+#include "../enemies/enemy.hpp"
 #include "../movements/imovementstrategy.hpp"
 #include "../movements/upmovement.hpp"
 #include "../movements/downmovement.hpp"

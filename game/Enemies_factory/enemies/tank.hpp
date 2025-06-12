@@ -1,7 +1,7 @@
 #ifndef TANK_HPP
 #define TANK_HPP
 #include "../movements/imovementstrategy.hpp"
-#include "enemy.hpp"
+#include "../enemies/enemy.hpp"
 
 class Tank : public Enemy {
 public:

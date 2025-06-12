@@ -1,7 +1,7 @@
 #ifndef BOSS_HPP
 #define BOSS_HPP
 
-#include "enemy.hpp"
+#include "../enemies/enemy.hpp"
 #include "../movements/imovementstrategy.hpp"
 
 class Boss : public Enemy {

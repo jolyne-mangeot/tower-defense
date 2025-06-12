@@ -10,7 +10,7 @@
 //     static Enemy* createEnemy(IMovementStrategy* strategy);
 // };
 
-#include "enemy.hpp"
+#include "../enemies/enemy.hpp"
 #include "../movements/imovementstrategy.hpp"
 
 class EnemyFactory {
