@@ -5,7 +5,7 @@
 
 class RightMovement : public IMovementStrategy {
 public:
-    void move(Enemy& enemy, const std::array<int, 2>& checkpoint) override;
+    int move(Enemy& enemy, const std::array<int, 2>& checkpoint) override;
 };
 
 #endif

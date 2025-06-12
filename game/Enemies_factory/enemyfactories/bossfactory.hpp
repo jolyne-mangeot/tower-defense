@@ -6,8 +6,9 @@
 
 class BossFactory : public EnemyFactory {
 public:
-    Enemy* createEnemy(IMovementStrategy* strategy) override {
-        return new Boss(strategy);
+    BossFactory(const int x, const int y) : EnemyFactory(x, y) {}
+    shared_ptr<Enemy> createEnemy(IMovementStrategy* strategy) override {
+        return make_shared<Boss>(strategy, x, y);
     }
 };
 

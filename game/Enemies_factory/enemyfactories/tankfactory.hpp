@@ -6,8 +6,9 @@
 
 class TankFactory : public EnemyFactory {
 public:
-    Enemy* createEnemy(IMovementStrategy* strategy) override {
-        return new Tank(strategy);
+    TankFactory(const int x, const int y) : EnemyFactory(x, y) {}
+    shared_ptr<Enemy> createEnemy(IMovementStrategy* strategy) override {
+        return make_shared<Tank>(strategy, x, y);
     }
 };
 
