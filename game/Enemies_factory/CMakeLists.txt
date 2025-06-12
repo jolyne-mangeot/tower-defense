@@ -23,7 +23,10 @@ add_executable(TestExecutable
     enemies/tank.cpp
     enemies/flash.cpp
     enemies/boss.cpp
-    movements/straightmovement.cpp
+    movements/upmovement.cpp
+    movements/downmovement.cpp
+    movements/leftmovement.cpp
+    movements/rightmovement.cpp
     enemyfactories/enemyfactory.cpp
 )
 

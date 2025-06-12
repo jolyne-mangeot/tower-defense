@@ -1,0 +1,44 @@
+[
+{
+  "directory": "C:/Users/Adeline/Documents/C++/tower-defense/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemies -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemyfactories -IC:/Users/Adeline/Documents/C++/tower-defense/test/movements -g -std=gnu++14 -o CMakeFiles\\TestExecutable.dir\\test_main.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\test_main.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\test_main.cpp",
+  "output": "CMakeFiles\\TestExecutable.dir\\test_main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Adeline/Documents/C++/tower-defense/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemies -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemyfactories -IC:/Users/Adeline/Documents/C++/tower-defense/test/movements -g -std=gnu++14 -o CMakeFiles\\TestExecutable.dir\\enemies\\enemy.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\enemies\\enemy.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\enemies\\enemy.cpp",
+  "output": "CMakeFiles\\TestExecutable.dir\\enemies\\enemy.cpp.obj"
+},
+{
+  "directory": "C:/Users/Adeline/Documents/C++/tower-defense/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemies -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemyfactories -IC:/Users/Adeline/Documents/C++/tower-defense/test/movements -g -std=gnu++14 -o CMakeFiles\\TestExecutable.dir\\enemies\\tank.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\enemies\\tank.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\enemies\\tank.cpp",
+  "output": "CMakeFiles\\TestExecutable.dir\\enemies\\tank.cpp.obj"
+},
+{
+  "directory": "C:/Users/Adeline/Documents/C++/tower-defense/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemies -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemyfactories -IC:/Users/Adeline/Documents/C++/tower-defense/test/movements -g -std=gnu++14 -o CMakeFiles\\TestExecutable.dir\\enemies\\flash.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\enemies\\flash.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\enemies\\flash.cpp",
+  "output": "CMakeFiles\\TestExecutable.dir\\enemies\\flash.cpp.obj"
+},
+{
+  "directory": "C:/Users/Adeline/Documents/C++/tower-defense/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemies -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemyfactories -IC:/Users/Adeline/Documents/C++/tower-defense/test/movements -g -std=gnu++14 -o CMakeFiles\\TestExecutable.dir\\enemies\\boss.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\enemies\\boss.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\enemies\\boss.cpp",
+  "output": "CMakeFiles\\TestExecutable.dir\\enemies\\boss.cpp.obj"
+},
+{
+  "directory": "C:/Users/Adeline/Documents/C++/tower-defense/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemies -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemyfactories -IC:/Users/Adeline/Documents/C++/tower-defense/test/movements -g -std=gnu++14 -o CMakeFiles\\TestExecutable.dir\\movements\\straightmovement.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\movements\\straightmovement.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\movements\\straightmovement.cpp",
+  "output": "CMakeFiles\\TestExecutable.dir\\movements\\straightmovement.cpp.obj"
+},
+{
+  "directory": "C:/Users/Adeline/Documents/C++/tower-defense/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemies -IC:/Users/Adeline/Documents/C++/tower-defense/test/enemyfactories -IC:/Users/Adeline/Documents/C++/tower-defense/test/movements -g -std=gnu++14 -o CMakeFiles\\TestExecutable.dir\\enemyfactories\\enemyfactory.cpp.obj -c C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\enemyfactories\\enemyfactory.cpp",
+  "file": "C:\\Users\\Adeline\\Documents\\C++\\tower-defense\\test\\enemyfactories\\enemyfactory.cpp",
+  "output": "CMakeFiles\\TestExecutable.dir\\enemyfactories\\enemyfactory.cpp.obj"
+}
+]
