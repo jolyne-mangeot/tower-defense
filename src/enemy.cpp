@@ -10,14 +10,15 @@ Enemy::Enemy(float x, float y) : x(x), y(y) {}
 void Enemy::takeDamage(int dmg)
 {
     health -= dmg;
-    std::cout << "L'ennemi a subi " << dmg << "degats";
+    std::cout << "L'ennemi a subi " << dmg << " degats\n";
     if (health <= 0)
     {
         std::cout << "Le vilain très vilain est ko !! \n";
     }
     else
     {
-        std::cout << "PV restants : " << health << "\n";
+        std::cout << "PV restants : " << health << "\n" << std::endl;
+
     }
 }
 

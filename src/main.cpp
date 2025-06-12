@@ -18,9 +18,10 @@ int main()
         std::cout << "1 Acheter une tour\n";
         std::cout << "2 Attaquer l'ennemi avec une tour\n";
         std::cout << "3 Faire évoluer une tour\n";
-        std::cout << "4 Quitter\n";
-        std::cout << " -- Choix : ";
+        std::cout << "4 Quitter\n" << std::endl;
+        std::cout << " -- Choix : " << std::endl;
         std::cin >> choix;
+        std::cout << " "<< std::endl;
 
         switch (choix)
         {
@@ -29,9 +30,10 @@ int main()
             std::cout << "Choisissez le type de tour à acheter :\n";
             std::cout << "1. Atomic Tower\n";
             std::cout << "2. Crazy Tower\n";
-            std::cout << " -- Choix : ";
+            std::cout << " -- Choix : " << std::endl;
             int typeTour;
             std::cin >> typeTour;
+            
 
             Tower *newTower = nullptr;
             if (typeTour == 1)
