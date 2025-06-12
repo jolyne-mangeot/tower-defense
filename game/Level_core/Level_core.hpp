@@ -39,6 +39,7 @@ public:
     ~Level_core();
     void generate_pointers(const shared_ptr<Level_core>& self_pointer);
     weak_ptr<Level_wave> instantiate_wave();
+    void update_enemies_through();
     int wave_is_running() const;
 };
 

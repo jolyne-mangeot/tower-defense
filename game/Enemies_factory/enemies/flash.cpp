@@ -6,8 +6,8 @@
 using std::cout;
 using std::endl;
 
-Flash::Flash(IMovementStrategy* strategy)
-    : Enemy(strategy) {
+Flash::Flash(IMovementStrategy* strategy, const int x, const int y)
+    : Enemy(strategy, x, y) {
         this->setHp(80.0f);
         this->initSpeed(150.0f);
         this->revenue = static_cast<int>(this->revenue * 0.8f);

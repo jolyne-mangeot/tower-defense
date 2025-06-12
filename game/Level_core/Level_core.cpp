@@ -51,12 +51,19 @@ Level_core::Level_core(const string &level_json_path) {
 
 void Level_core::generate_pointers(const shared_ptr<Level_core>& self_pointer) {
 
+    int factories_x = checkpoints_coordinates.at(0).at(0);
+    int factories_y = checkpoints_coordinates.at(0).at(1);
+
     this->factories_shared_ptrs = {
-        make_shared<EnemyFactory>(),
-        make_shared<FlashFactory>(),
-        make_shared<TankFactory>(),
-        make_shared<BossFactory>()
+        make_shared<EnemyFactory>(factories_x, factories_y),
+        make_shared<FlashFactory>(factories_x, factories_y),
+        make_shared<TankFactory>(factories_x, factories_y),
+        make_shared<BossFactory>(factories_x, factories_y)
     };
+
+    for (shared_ptr<EnemyFactory> instantiated_factory : this->factories_shared_ptrs) {
+        instantiated_factory->set_level_ptr(this->self_pointer);
+    }
 
     this->factories_weak_ptrs = {
         factories_shared_ptrs.basic_enemy_factory,
@@ -71,6 +78,14 @@ void Level_core::generate_pointers(const shared_ptr<Level_core>& self_pointer) {
         tower_shared_ptr.push_back(tower_ptr);
     }
 }
+
+void Level_core::update_enemies_through() {
+    enemies_through++;
+    if (enemies_through >= 3) {
+        current_wave_pointer->~Level_wave();
+    }
+}
+
 
 int Level_core::wave_is_running() const {
     if (this->current_wave_pointer->wave_is_running()) {

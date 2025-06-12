@@ -38,16 +38,16 @@ public:
 
             switch (wave_data.spawn_order.at(i+1)) {
                 case 0:
-                    instantiated_enemies.at(i) = factories_weak_ptrs.basic_enemy_factory.lock()->createEnemy(new StraightMovement);
+                    instantiated_enemies.at(i) = factories_weak_ptrs.basic_enemy_factory.lock()->createEnemy(new UpMovement);
                     break;
                 case 1:
-                    instantiated_enemies.at(i) = factories_weak_ptrs.flash_enemy_factory.lock()->createEnemy(new StraightMovement);
+                    instantiated_enemies.at(i) = factories_weak_ptrs.flash_enemy_factory.lock()->createEnemy(new UpMovement);
                     break;
                 case 2:
-                    instantiated_enemies.at(i) = factories_weak_ptrs.tank_enemy_factory.lock()->createEnemy(new StraightMovement);
+                    instantiated_enemies.at(i) = factories_weak_ptrs.tank_enemy_factory.lock()->createEnemy(new UpMovement);
                     break;
                 case 3:
-                    instantiated_enemies.at(i) = factories_weak_ptrs.boss_factory.lock()->createEnemy(new StraightMovement);
+                    instantiated_enemies.at(i) = factories_weak_ptrs.boss_factory.lock()->createEnemy(new UpMovement);
                     break;
                 default:
                     continue;
@@ -56,6 +56,12 @@ public:
     };
 
     bool wave_is_running() const;
+
+    void enemy_slayed(const weak_ptr<Enemy> &enemy);
+
+    void enemy_went_through(const weak_ptr<Enemy> &enemy);
+
+    void enemy_erased(const weak_ptr<Enemy> &enemy);
 
     ~Level_wave() {
         wave_results wave_results;

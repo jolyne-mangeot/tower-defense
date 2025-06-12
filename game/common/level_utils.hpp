@@ -11,7 +11,10 @@
 #include "enemyfactories/tankfactory.hpp"
 #include "enemyfactories/flashfactory.hpp"
 #include "enemyfactories/bossfactory.hpp"
-#include "movements/straightmovement.hpp"
+#include "movements/upmovement.hpp"
+#include "movements/downmovement.hpp"
+#include "movements/leftmovement.hpp"
+#include "movements/rightmovement.hpp"
 
 #include "enemy.hpp"
 #include "flash.hpp"
@@ -46,6 +49,13 @@ typedef struct {
     int enemies_through;
 
 } wave_results;
+
+#if defined(ENEMY_HPP) & !defined(ENEMY_INCLUDED)
+#define ENEMY_INCLUDED
+
+#include "Level_core.hpp"
+
+#endif
 
 #if defined(USER_DATA_HPP) & !defined(USER_DATA_INCLUDED)
 #define USER_DATA_INCLUDED

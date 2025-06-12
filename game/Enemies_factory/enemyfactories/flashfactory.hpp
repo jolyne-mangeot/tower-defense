@@ -6,8 +6,9 @@
 
 class FlashFactory : public EnemyFactory {
 public:
-    Enemy* createEnemy(IMovementStrategy* strategy) override {
-        return new Flash(strategy);
+    FlashFactory(const int x, const int y) : EnemyFactory(x, y) {}
+    shared_ptr<Enemy> createEnemy(IMovementStrategy* strategy) override {
+        return make_shared<Flash>(strategy, x, y);
     }
 };
 

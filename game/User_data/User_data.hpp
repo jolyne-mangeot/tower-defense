@@ -31,7 +31,7 @@ public:
         current_gold -= price;
         towers_bought[tower_level] += price;
     }
-    void set_score(const int reward) {
+    void win_score(const int reward) {
         score += reward;
     }
 };

@@ -5,8 +5,8 @@
 using std::cout;
 using std::endl;
 
-Tank::Tank(IMovementStrategy* strategy)
-    : Enemy(strategy) {
+Tank::Tank(IMovementStrategy* strategy, const int x, const int y)
+    : Enemy(strategy, x, y) {
         this->setHp(150.0f);
         this->initSpeed(80.0f);
         this->revenue = static_cast<int>(this->revenue * 1.2f);

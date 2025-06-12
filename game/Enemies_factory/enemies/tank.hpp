@@ -5,7 +5,7 @@
 
 class Tank : public Enemy {
 public:
-    Tank(IMovementStrategy* strategy);
+    Tank(IMovementStrategy* strategy, const int x, const int y);
     void presentYourself();
 };
 

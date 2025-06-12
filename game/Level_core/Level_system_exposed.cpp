@@ -41,8 +41,14 @@ extern "C" {
         return level->wave_is_running();
     }
 
-    __declspec(dllexport) int enemy_went_through(const shared_ptr<Level_core> &level) {
-        level->enemies_through++;
+    __declspec(dllexport) int advance_wave(const shared_ptr<Level_core> &level) {
+        if (level->current_wave_id == level->number_of_waves) {
+            return 0;
+        } else {return level->current_wave_id++;}
+    }
+
+    __declspec(dllexport) int enemy_went_through(const shared_ptr<Level_core> &level, const weak_ptr<Enemy> &enemy) {
+        level->current_wave_pointer->enemy_went_through(enemy);
         return level->enemies_through;
     }
 

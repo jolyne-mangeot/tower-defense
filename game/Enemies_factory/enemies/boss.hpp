@@ -6,7 +6,7 @@
 
 class Boss : public Enemy {
 public:
-    Boss(IMovementStrategy* strategy);
+    Boss(IMovementStrategy* strategy, const int x, const int y);
     void presentYourself() override;
 };
 

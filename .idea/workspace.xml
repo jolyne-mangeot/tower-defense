@@ -5,6 +5,9 @@
   </component>
   <component name="BackendCodeEditorMiscSettings">
     <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="26" type="long" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -17,7 +20,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="tower_defense_godot" targetName="tower_defense_godot" />
+      <config projectName="Unity_cpp_backend" targetName="Unity_cpp_backend" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -27,27 +30,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4d864d9-49da-4404-b421-fb0a0336b9c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/tower-defense-godot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/bin/gdexample.gdextension" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gdexample.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gdexample.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/register_types.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/register_types.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tower-defense.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tower-defense.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tower-defense/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tower-defense/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tower-defense/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tower-defense/icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tower-defense/icon.svg.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tower-defense/project.godot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/enemies/boss.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/enemies/boss.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/enemies/boss.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/enemies/boss.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/enemies/enemy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/enemies/enemy.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/enemies/enemy.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/enemies/enemy.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/enemies/flash.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/enemies/flash.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/enemies/flash.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/enemies/flash.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/enemies/tank.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/enemies/tank.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/enemies/tank.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/enemies/tank.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/enemyfactories/bossfactory.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/enemyfactories/bossfactory.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/enemyfactories/enemyfactory.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/enemyfactories/enemyfactory.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/enemyfactories/flashfactory.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/enemyfactories/flashfactory.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/enemyfactories/tankfactory.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/enemyfactories/tankfactory.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/movements/downmovement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/movements/downmovement.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/movements/downmovement.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/movements/downmovement.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/movements/imovementstrategy.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/movements/imovementstrategy.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/movements/leftmovement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/movements/leftmovement.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/movements/leftmovement.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/movements/leftmovement.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/movements/rightmovement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/movements/rightmovement.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/movements/rightmovement.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/movements/rightmovement.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/movements/upmovement.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/movements/upmovement.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Enemies_factory/movements/upmovement.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Enemies_factory/movements/upmovement.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Level_core/Level_core.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Level_core/Level_core.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Level_core/Level_system_exposed.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Level_core/Level_system_exposed.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Level_wave/Level_wave.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Level_wave/Level_wave.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Level_wave/Level_wave.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/Level_wave/Level_wave.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/User_data/User_data.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/User_data/User_data.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/common/level_utils.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/game/common/level_utils.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,28 +101,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;preprod&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "tower-defense-unity",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="tower_defense_godot" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tower_defense_godot" TARGET_NAME="tower_defense_godot" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tower_defense_godot" RUN_TARGET_NAME="tower_defense_godot">
+    <configuration name="Unity_cpp_backend" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Unity_cpp_backend" TARGET_NAME="Unity_cpp_backend" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Unity_cpp_backend" RUN_TARGET_NAME="Unity_cpp_backend">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>

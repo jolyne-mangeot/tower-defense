@@ -7,7 +7,7 @@ class Enemy;
 class IMovementStrategy {
 public:
     virtual ~IMovementStrategy() = default;
-    virtual void move(Enemy& enemy, const std::array<int, 2>& checkpoint) = 0;
+    virtual int move(Enemy& enemy, const std::array<int, 2>& checkpoint) = 0;
 };
 
 #endif // MOVEMENTSTRATEGY_HPP

@@ -5,8 +5,8 @@
 using std::cout;
 using std::endl;
 
-Boss::Boss(IMovementStrategy* strategy)
-    : Enemy(strategy) {
+Boss::Boss(IMovementStrategy* strategy, const int x, const int y)
+    : Enemy(strategy, x, y) {
         this->setHp(250);
         this->initSpeed(120.0f);
         this->revenue = static_cast<int>(this->revenue * 2.0f);
