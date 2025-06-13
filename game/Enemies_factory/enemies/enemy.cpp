@@ -3,7 +3,6 @@
 //
 #include <iostream>
 
-// #include "enemy.hpp"
 #include "../enemies/enemy.hpp"
 #include "../movements/imovementstrategy.hpp"
 #include "../movements/upmovement.hpp"
@@ -27,24 +26,25 @@ Enemy::~Enemy() {
     delete movement_strategy;
 }
 
-void Enemy::set_level_ptr(const weak_ptr<Level_core> &level_ptr) {
-    this->level_ptr = level_ptr;
+void Enemy::set_type_id(const int id) {
+    enemy_type_id = id;
 }
+
 
 int Enemy::move()
 {
     const float usual_speed = this->speed;
-    changeDirection(level_ptr.lock()->checkpoints_coordinates.at(current_following_checkpoint));
+    changeDirection(checkpoints_coordinates.lock()->at(current_following_checkpoint));
     int movement_status = -1;
     if (movement_strategy) {
-        movement_status = movement_strategy->move(*this, level_ptr.lock()->checkpoints_coordinates.at(current_following_checkpoint));
+        movement_status = movement_strategy->move(*this, checkpoints_coordinates.lock()->at(current_following_checkpoint));
     }
     
     if (this->speed != usual_speed) {
         setSpeed(usual_speed);
     }
 
-    if (current_following_checkpoint >= level_ptr.lock()->number_of_checkpoints) {
+    if (current_following_checkpoint >= checkpoints_coordinates.lock()->size()) {
         movement_status = 5;
     }
 
@@ -56,10 +56,6 @@ void Enemy::takeDamage(const int damage) {
     if (health_points < 0) {
         die();
     }
-}
-
-void Enemy::die() const {
-    level_ptr.lock()->current_wave_pointer->enemy_slayed(self_ptr);
 }
 
 float Enemy::getHp() const {

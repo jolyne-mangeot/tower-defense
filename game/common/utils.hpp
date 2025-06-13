@@ -18,12 +18,4 @@
 using namespace std;
 using namespace nlohmann;
 
-#if defined(MAIN_CPP) & !defined(MAIN_INCLUDED)
-#define MAIN_INCLUDED
-
-#include "Level_core.hpp"
-
-#endif
-
-
 #endif //UTILS_HPP

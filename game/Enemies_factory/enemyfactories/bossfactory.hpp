@@ -3,12 +3,18 @@
 
 #include "enemyfactory.hpp"
 #include "../enemies/boss.hpp"
+#include "enemy.hpp"
+
+class EnemyFactory;
+class Enemy;
 
 class BossFactory : public EnemyFactory {
 public:
     BossFactory(const int x, const int y) : EnemyFactory(x, y) {}
+
     shared_ptr<Enemy> createEnemy(IMovementStrategy* strategy) override {
-        return make_shared<Boss>(strategy, x, y);
+        shared_ptr<Enemy> new_boss_ptr = make_shared<Boss>(strategy, x, y);
+        return new_boss_ptr;
     }
 };
 

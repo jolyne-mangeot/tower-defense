@@ -1,7 +1,11 @@
 #ifndef DOWNMOVEMENT_HPP
 #define DOWNMOVEMENT_HPP
+
 #include <array>
-#include "IMovementStrategy.hpp"
+#include "imovementstrategy.hpp"
+
+class IMovementStrategy;
+class Enemy;
 
 class DownMovement : public IMovementStrategy {
 public:
