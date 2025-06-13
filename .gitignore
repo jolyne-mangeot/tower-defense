@@ -33,7 +33,9 @@
 
 */.idea
 .idea
-
+build
+*/build
+build/**
 */.vscode
 
 */cmake-build-debug

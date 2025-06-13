@@ -5,19 +5,21 @@
 #ifndef ENEMY_HPP
 #define ENEMY_HPP
 
-#include "level_utils.hpp"
+#include "utils.hpp"
 
-class IMovementStrategy; 
+class IMovementStrategy;
+
 class Enemy {
 public:
     Enemy(IMovementStrategy* movement, float x, float y);
     ~Enemy();
-    weak_ptr<Level_core> level_ptr;
     weak_ptr<Enemy> self_ptr;
+    weak_ptr<vector<array<int, 2>>> checkpoints_coordinates;
+    int enemy_type_id{0};
     int current_following_checkpoint{1};
     int revenue{80};
     virtual int move();
-    void set_level_ptr(const weak_ptr<Level_core> &level_ptr);
+    void set_type_id(int id);
     void takeDamage(int damage);
     float getHp() const;
     void setHp(float percent);
@@ -35,7 +37,7 @@ public:
 
 private:
     int health_points{100};
-    int x{0}, y{0};
+    float x{0}, y{0};
     float speed{50.0f}; // pixel per frame
     IMovementStrategy* movement_strategy;
     void changeDirection(array<int, 2> checkpoint);

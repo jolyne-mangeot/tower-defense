@@ -4,9 +4,10 @@
 #include "../enemies/enemy.hpp"
 #include "../movements/imovementstrategy.hpp"
 
+class Enemy;
 class Boss : public Enemy {
 public:
-    Boss(IMovementStrategy* strategy, const int x, const int y);
+    Boss(IMovementStrategy* strategy, float x, float y);
     void presentYourself() override;
 };
 

@@ -1,7 +1,11 @@
 #ifndef RIGHTMOVEMENT_HPP
 #define RIGHTMOVEMENT_HPP
+
 #include <array>
 #include "IMovementStrategy.hpp"
+
+class IMovementStrategy;
+class Enemy;
 
 class RightMovement : public IMovementStrategy {
 public:

@@ -1,8 +1,8 @@
 #ifndef MOVEMENTSTRATEGY_HPP
 #define MOVEMENTSTRATEGY_HPP
-#include <array>
 
-class Enemy;
+#include <array>
+#include "enemy.hpp"
 
 class IMovementStrategy {
 public:

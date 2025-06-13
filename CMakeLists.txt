@@ -14,6 +14,19 @@ include_directories(game/Level_wave)
 include_directories(game/User_data)
 include_directories(game/Towers_factory)
 include_directories(game/Towers_factory/src)
+include_directories(game/Pointer_manager)
+
+add_library(Unity_plugin SHARED
+        game/Level_system_exposed.cpp
+        game/Level_core/Level_core.cpp
+        game/Level_wave/Level_wave.cpp
+        game/User_data/User_data.cpp
+        game/Enemies_factory/enemies/enemy.cpp
+        game/Enemies_factory/movements/downmovement.cpp
+        game/Enemies_factory/movements/leftmovement.cpp
+        game/Enemies_factory/movements/rightmovement.cpp
+        game/Enemies_factory/movements/upmovement.cpp
+        game/Pointer_manager/Pointer_manager.cpp)
 
 add_executable(Unity_cpp_backend
         game/main.cpp
@@ -22,7 +35,6 @@ add_executable(Unity_cpp_backend
         game/Level_core/Level_core.hpp
         game/Level_wave/Level_wave.cpp
         game/Level_wave/Level_wave.hpp
-        game/common/level_utils.hpp
         game/User_data/User_data.cpp
         game/User_data/User_data.hpp
         game/Enemies_factory/enemies/boss.cpp
@@ -33,7 +45,6 @@ add_executable(Unity_cpp_backend
         game/Enemies_factory/enemies/tank.cpp
         game/Enemies_factory/enemies/tank.hpp
         game/Enemies_factory/enemyfactories/bossfactory.hpp
-        game/Enemies_factory/enemyfactories/enemyfactory.cpp
         game/Enemies_factory/enemyfactories/enemyfactory.hpp
         game/Enemies_factory/enemyfactories/flashfactory.hpp
         game/Enemies_factory/enemyfactories/tankfactory.hpp
@@ -44,4 +55,6 @@ add_executable(Unity_cpp_backend
         game/Enemies_factory/movements/rightmovement.cpp
         game/Enemies_factory/movements/rightmovement.hpp
         game/Enemies_factory/movements/upmovement.cpp
-        game/Enemies_factory/movements/upmovement.hpp)
+        game/Enemies_factory/movements/upmovement.hpp
+        game/common/game_structs.hpp
+        game/common/game_structs.hpp)
