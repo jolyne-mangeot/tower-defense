@@ -43,18 +43,21 @@ void AtomicTower::attack(Enemy *enemy)
         enemy->takeDamage(this->damage);
         std::cout<<"\t\tHP enemy : "<<enemy->getHp()<<endl;
         hit_counter++;
-        if (hit_counter >= 3)
-        {
+        if (hit_counter >= 3) {
             special_ready = true;
-            std::cout << "\t\tL'attaque spéciale est maintenant prête !\n";
-        }
-    }
+            std::cout << "\t\tBOOM Déclenchement attaque speciale Tour CRAZY.\n";
 
+            if(special_ready){
+                special_attack(enemy);
+                special_ready = false;
+                hit_counter = 0;
+            }
+        }
+        
+    } 
+}
     // std::cout << "AtomicTower attaque avec la puissance de Shadow\n";
     // enemy->takeDamage(80);
-
-   
-}
 
 void AtomicTower::special_attack(Enemy *enemy)
 {

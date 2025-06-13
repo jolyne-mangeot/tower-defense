@@ -32,6 +32,7 @@ add_executable(FloExecutable
     game/Towers_factory/crazyTower.cpp 
     game/Towers_factory/towerFactory.cpp 
     game/Towers_factory/tower.cpp 
+    game/Towers_factory/basicTower.cpp 
 )
 
 target_include_directories(FloExecutable PRIVATE
