@@ -10,12 +10,11 @@ class Enemy;
 
 class BossFactory : public EnemyFactory {
 public:
-    BossFactory(const int x, const int y) : EnemyFactory(x, y) {}
+    BossFactory();
 
-    shared_ptr<Enemy> createEnemy(IMovementStrategy* strategy) override {
-        shared_ptr<Enemy> new_boss_ptr = make_shared<Boss>(strategy, x, y);
-        return new_boss_ptr;
-    }
+    virtual Enemy* createEnemy(IMovementStrategy* strategy);
+
+    // shared_ptr<Enemy> createEnemy(IMovementStrategy* strategy) override;
 };
 
 #endif // BOSS_FACTORY_HPP

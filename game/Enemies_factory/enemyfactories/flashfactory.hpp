@@ -10,12 +10,11 @@ class Enemy;
 
 class FlashFactory : public EnemyFactory {
 public:
-    FlashFactory(const int x, const int y) : EnemyFactory(x, y) {}
+    FlashFactory() = default;
 
-    shared_ptr<Enemy> createEnemy(IMovementStrategy* strategy) override {
-        shared_ptr<Enemy> new_flash_ptr = make_shared<Flash>(strategy, x, y);
-        return new_flash_ptr;
-    }
+    virtual Enemy* createEnemy(IMovementStrategy* strategy);
+    // shared_ptr<Enemy> createEnemy(IMovementStrategy* strategy) override;
+
 };
 
 #endif // FLASH_FACTORY_HPP

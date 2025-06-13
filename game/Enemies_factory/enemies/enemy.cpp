@@ -14,10 +14,8 @@ using std::cout;
 using std::endl;
 
 Enemy::Enemy(
-    IMovementStrategy* movement,
-    const float x, const float y) :
-        movement_strategy(movement),
-        x(x), y(y)
+    IMovementStrategy* movement) :
+        movement_strategy(movement)
 {
     cout<<"Constructeur Enemy"<<endl;
 }
@@ -27,24 +25,25 @@ Enemy::~Enemy() {
 }
 
 void Enemy::set_type_id(const int id) {
-    enemy_type_id = id;
+    this->enemy_type_id = id;
 }
 
 
-int Enemy::move()
+int Enemy::move(const vector<array<int,2>>& checkpoints)
 {
     const float usual_speed = this->speed;
-    changeDirection(checkpoints_coordinates.lock()->at(current_following_checkpoint));
+    // changeDirection(checkpoints_coordinates.lock()->at(current_following_checkpoint));
+    changeDirection(checkpoints);
     int movement_status = -1;
-    if (movement_strategy) {
-        movement_status = movement_strategy->move(*this, checkpoints_coordinates.lock()->at(current_following_checkpoint));
+    if (this->movement_strategy) {
+        movement_status = movement_strategy->move(*this, checkpoints.at(this->index));
     }
     
     if (this->speed != usual_speed) {
         setSpeed(usual_speed);
     }
 
-    if (current_following_checkpoint >= checkpoints_coordinates.lock()->size()) {
+    if (this->index >= checkpoints.size()) {
         movement_status = 5;
     }
 
@@ -53,9 +52,9 @@ int Enemy::move()
 
 void Enemy::takeDamage(const int damage) {
     this->health_points -= damage;
-    if (health_points < 0) {
-        die();
-    }
+    // if (health_points < 0) {
+    //     die();
+    // }
 }
 
 float Enemy::getHp() const {
@@ -104,15 +103,20 @@ void Enemy::setMovement(IMovementStrategy *new_movement_strategy)
     this->movement_strategy = new_movement_strategy;
 }
 
-void Enemy::changeDirection(const std::array<int, 2> checkpoint)
-{
-    if (checkpoint[0] < this->x) {
+// void Enemy::changeDirection(const std::array<int, 2> checkpoint)
+void Enemy::changeDirection(const vector<array<int,2>>& checkpoints)
+{   
+    if (checkpoints.at(this->index).at(0) == this->x && checkpoints.at(this->index).at(1) == this->y) {
+        this->index++;
+    }
+
+    if (checkpoints.at(this->index).at(0) < this->x) {
         this->movement_strategy = new LeftMovement;
-    } else if (checkpoint[0] > this->x) {
+    } else if (checkpoints.at(this->index).at(0) > this->x) {
         this->movement_strategy = new RightMovement;
-    } else if (checkpoint[1] > this->y) {
+    } else if (checkpoints.at(this->index).at(1) > this->y) {
         this->movement_strategy = new UpMovement;
-    } else if (checkpoint[1] < this->y) {
+    } else if (checkpoints.at(this->index).at(1) < this->y) {
         this->movement_strategy = new DownMovement;
     }
 }

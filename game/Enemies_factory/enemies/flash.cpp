@@ -6,8 +6,8 @@
 using std::cout;
 using std::endl;
 
-Flash::Flash(IMovementStrategy* strategy, const float x, const float y)
-    : Enemy(strategy, x, y) {
+Flash::Flash(IMovementStrategy* strategy)
+    : Enemy(strategy) {
         this->set_type_id(1);
         this->setHp(80.0f);
         this->initSpeed(150.0f);

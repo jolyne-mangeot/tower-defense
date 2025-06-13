@@ -27,6 +27,9 @@ int main()
     FlashFactory* flash_Factory = new FlashFactory;
     TankFactory* tank_factory = new TankFactory;
 
+    // std::shared_ptr<Enemy> enemy = factory->createEnemy(new UpMovement);
+    // std::shared_ptr<Enemy> flash = flash_Factory->createEnemy(new UpMovement);
+    // std::shared_ptr<Enemy> tank = tank_factory->createEnemy(new UpMovement);
     Enemy* enemy = factory->createEnemy(new UpMovement);
     Enemy* flash = flash_Factory->createEnemy(new UpMovement);
     Enemy* tank = tank_factory->createEnemy(new UpMovement);
@@ -45,13 +48,13 @@ int main()
     std::array<int, 2> checkpoint1{450, 50};
     std::array<int, 2> checkpoint2{450, 250};
     std::array<int, 2> checkpoint3{150, 250};
-    std::array<int, 2> checkpoint4{150, 250};
-    std::array<int, 2> checkpoint5{550, 250};
-    std::array<int, 2> checkpoint6{550, 850};
-    std::array<int, 2> checkpoint7{550, 250};
-    std::array<int, 2> checkpoint8{480, 250};
-    std::array<int, 2> checkpoint9{450, 50};
-    std::array<int, 2> checkpoint10{450, 250};
+    std::array<int, 2> checkpoint4{550, 250};
+    std::array<int, 2> checkpoint5{550, 850};
+    std::array<int, 2> checkpoint6{550, 250};
+    std::array<int, 2> checkpoint7{480, 250};
+    std::array<int, 2> checkpoint8{450, 50};
+    std::array<int, 2> checkpoint9{450, 250};
+    std::array<int, 2> checkpoint10{450, 0};
 
     checkpoints.push_back(checkpoint1);
     checkpoints.push_back(checkpoint2);
@@ -66,7 +69,7 @@ int main()
     // }
     
     cout<<"Je déplace l'ennemi boss"<<endl;
-    flash->setX(350);
+    // flash->setX(350);
     // cout<<"checkpoint visé x : "<<checkpoints[2][0]<<" y : "<<checkpoints[2][1]<<endl;
     cout<<"enemi x : "<<flash->getX()<<" enemi y : "<<flash->getY()<<endl;
     // cout<<"Je vérifie le point y de départ de l'ennemi : "<<flash->getY()<<endl;
@@ -75,7 +78,7 @@ int main()
         cout<<"\tactual checkpoint : "<<actual_checkpoint[0]<<" "<<actual_checkpoint[1]<<endl;
         while(actual_checkpoint[0] != flash->getX() || actual_checkpoint[1] != flash->getY()) {
             
-            flash->move(actual_checkpoint);
+            flash->move(checkpoints);
             tower->attack(flash);
 
             count++;
