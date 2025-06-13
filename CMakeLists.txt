@@ -1,60 +1,42 @@
-cmake_minimum_required(VERSION 3.31)
-project(Unity_cpp_backend)
+cmake_minimum_required(VERSION 3.13)
 
-set(CMAKE_CXX_STANDARD 17)
+project(Test)
 
-include_directories(game)
-include_directories(game/common)
-include_directories(game/Enemies_factory)
-include_directories(game/Enemies_factory/enemies)
-include_directories(game/Enemies_factory/enemyfactories)
-include_directories(game/Enemies_factory/movements)
-include_directories(game/Level_core)
-include_directories(game/Level_wave)
-include_directories(game/User_data)
-include_directories(game/Towers_factory)
-include_directories(game/Towers_factory/src)
-include_directories(game/Pointer_manager)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
-add_library(Unity_plugin SHARED
-        game/Level_system_exposed.cpp
-        game/Level_core/Level_core.cpp
-        game/Level_wave/Level_wave.cpp
-        game/User_data/User_data.cpp
-        game/Enemies_factory/enemies/enemy.cpp
-        game/Enemies_factory/movements/downmovement.cpp
-        game/Enemies_factory/movements/leftmovement.cpp
-        game/Enemies_factory/movements/rightmovement.cpp
-        game/Enemies_factory/movements/upmovement.cpp
-        game/Pointer_manager/Pointer_manager.cpp)
+# add_library(Test SHARED
+#         test_main.cpp
+#         ../enemies/enemy.cpp
+#         ../enemies/tank.cpp
+#         ../enemies/flash.cpp
+#         ../enemies/boss.cpp
+#         ../movements/straightmovement.cpp
+#         ../enemyfactories/enemyfactory.cpp)
 
-add_executable(Unity_cpp_backend
-        game/main.cpp
-        game/common/utils.hpp
-        game/Level_core/Level_core.cpp
-        game/Level_core/Level_core.hpp
-        game/Level_wave/Level_wave.cpp
-        game/Level_wave/Level_wave.hpp
-        game/User_data/User_data.cpp
-        game/User_data/User_data.hpp
-        game/Enemies_factory/enemies/boss.cpp
-        game/Enemies_factory/enemies/enemy.cpp
-        game/Enemies_factory/enemies/enemy.hpp
-        game/Enemies_factory/enemies/flash.cpp
-        game/Enemies_factory/enemies/flash.hpp
-        game/Enemies_factory/enemies/tank.cpp
-        game/Enemies_factory/enemies/tank.hpp
-        game/Enemies_factory/enemyfactories/bossfactory.hpp
-        game/Enemies_factory/enemyfactories/enemyfactory.hpp
-        game/Enemies_factory/enemyfactories/flashfactory.hpp
-        game/Enemies_factory/enemyfactories/tankfactory.hpp
-        game/Enemies_factory/movements/downmovement.cpp
-        game/Enemies_factory/movements/downmovement.hpp
-        game/Enemies_factory/movements/leftmovement.cpp
-        game/Enemies_factory/movements/leftmovement.hpp
-        game/Enemies_factory/movements/rightmovement.cpp
-        game/Enemies_factory/movements/rightmovement.hpp
-        game/Enemies_factory/movements/upmovement.cpp
-        game/Enemies_factory/movements/upmovement.hpp
-        game/common/game_structs.hpp
-        game/common/game_structs.hpp)
+# Collect all your source files, e.g.:
+file(GLOB_RECURSE SOURCES "*.cpp")
+
+add_executable(FloExecutable
+    game/Towers_factory/main.cpp
+    game/Enemies_factory/enemies/enemy.cpp
+    game/Enemies_factory/enemies/boss.cpp
+    game/Enemies_factory/enemies/tank.cpp
+    game/Enemies_factory/enemies/flash.cpp
+    game/Enemies_factory/enemyfactories/enemyfactory.cpp
+    game/Enemies_factory/movements/upmovement.cpp
+    game/Enemies_factory/movements/downmovement.cpp
+    game/Enemies_factory/movements/leftmovement.cpp
+    game/Enemies_factory/movements/rightmovement.cpp
+    game/Towers_factory/atomicTower.cpp
+    game/Towers_factory/crazyTower.cpp 
+    game/Towers_factory/towerFactory.cpp 
+    game/Towers_factory/tower.cpp 
+    game/Towers_factory/basicTower.cpp 
+)
+
+target_include_directories(FloExecutable PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/game/enemies
+    ${CMAKE_CURRENT_SOURCE_DIR}/game/enemyfactories
+    ${CMAKE_CURRENT_SOURCE_DIR}/game/movements
+)

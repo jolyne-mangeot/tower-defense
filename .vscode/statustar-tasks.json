@@ -1,0 +1,14 @@
+{
+  "tasks.commands": [
+    {
+      "text": "Build",
+      "tooltip": "Compiler le fichier C++ actif",
+      "task": "Build add.cpp"
+    },
+    {
+      "text": "Run",
+      "tooltip": "Exécuter le fichier compilé",
+      "task": "Run add.exe"
+    }
+  ]
+}

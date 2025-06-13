@@ -5,7 +5,11 @@ Tower *TowerFactory::createTower(TowerType type)
     Tower *tower = nullptr;
 
     switch (type)
+    
     {
+    case BASIC:
+        tower = new BasicTower();
+        break;
     case ATOMIC:
         tower = new AtomicTower();
         break;
