@@ -7,12 +7,11 @@
 
 class TankFactory : public EnemyFactory {
 public:
-    TankFactory(const int x, const int y) : EnemyFactory(x, y) {}
+    TankFactory() = default;
 
-    shared_ptr<Enemy> createEnemy(IMovementStrategy* strategy) override {
-        shared_ptr<Enemy> new_tank_ptr = make_shared<Tank>(strategy, x, y);
-        return new_tank_ptr;
-    }
+    virtual Enemy* createEnemy(IMovementStrategy* strategy);
+
+    // shared_ptr<Enemy> createEnemy(IMovementStrategy* strategy) override;
 };
 
 #endif // TANK_FACTORY_HPP

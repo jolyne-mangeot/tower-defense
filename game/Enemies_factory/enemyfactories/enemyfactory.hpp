@@ -9,16 +9,15 @@
 
 class EnemyFactory {
 public:
-    int x;
-    int y;
-    EnemyFactory(const int x, const int y) : x(x), y(y) {};
+    int x{0};
+    int y{50};
+    EnemyFactory() = default;
 
     virtual ~EnemyFactory() = default;
 
-    virtual shared_ptr<Enemy> createEnemy(IMovementStrategy* strategy) {
-        shared_ptr<Enemy> new_enemy = make_shared<Enemy>(strategy, x, y);
-        return new_enemy;
-    }
+    virtual Enemy* createEnemy(IMovementStrategy* strategy);
+
+    // virtual shared_ptr<Enemy> createEnemy(IMovementStrategy* strategy);
 };
 
 #endif

@@ -1,5 +1,5 @@
 #include "upmovement.hpp"
-#include "../enemies/enemy.hpp"
+#include "enemy.hpp"
 #include <array>
 #include <iostream>
 
@@ -11,7 +11,6 @@ using std::endl;
 int UpMovement::move(Enemy& enemy, const std::array<int, 2>& checkpoint) {
     if (enemy.getY() + enemy.getSpeed() > checkpoint[1]) {
         enemy.setSpeed(checkpoint[1] - enemy.getY());
-        enemy.current_following_checkpoint++;
     }
     enemy.setY(static_cast<int>(enemy.getSpeed()));
 
