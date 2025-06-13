@@ -20,6 +20,7 @@ using std::endl;
 
 int main()
 {
+    std::setlocale(LC_ALL, ".utf8");
     std::cout << "Création d'un ennemi...\n";
     // Enemy *enemy = new Enemy(2.0f, 2.0f);
     EnemyFactory* factory = new EnemyFactory;
@@ -30,7 +31,7 @@ int main()
     Enemy* flash = flash_Factory->createEnemy(new UpMovement);
     Enemy* tank = tank_factory->createEnemy(new UpMovement);
 
-    Tower* tower = TowerFactory::createTower(ATOMIC);
+    Tower* tower = TowerFactory::createTower(BASIC);
     tower->x = 465;
     tower->y = 240;
 
@@ -49,6 +50,8 @@ int main()
     std::array<int, 2> checkpoint6{550, 850};
     std::array<int, 2> checkpoint7{550, 250};
     std::array<int, 2> checkpoint8{480, 250};
+    std::array<int, 2> checkpoint9{450, 50};
+    std::array<int, 2> checkpoint10{450, 250};
 
     checkpoints.push_back(checkpoint1);
     checkpoints.push_back(checkpoint2);
@@ -58,6 +61,8 @@ int main()
     checkpoints.push_back(checkpoint6);
     checkpoints.push_back(checkpoint7);
     checkpoints.push_back(checkpoint8);
+    checkpoints.push_back(checkpoint9);
+    checkpoints.push_back(checkpoint10);
     // }
     
     cout<<"Je déplace l'ennemi boss"<<endl;
@@ -78,7 +83,7 @@ int main()
     }
     std::cout << "Un ennemi est apparu aux coordonnées (" << enemy->getX() << ", " << enemy->getY() << ")\n";
 
-    std::vector<Tower *> towers;
+   /* std::vector<Tower *> towers;
     int choix = 0;
 
     while (choix != 4)
@@ -195,4 +200,6 @@ int main()
     delete enemy;
 
     return 0;
+}*/
+
 }

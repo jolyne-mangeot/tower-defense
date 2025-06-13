@@ -26,11 +26,25 @@ void CrazyTower::attack(Enemy *enemy)
         std::cout << "\t\tBOOM Déclenchement attaque Tour CRAZY.\n";
         enemy->takeDamage(this->damage);
         std::cout<<"\t\tHP enemy : "<<enemy->getHp()<<endl;
+
+        if (hit_counter >=3) {
+            special_ready= true;
+            std::cout << "\t\tBOOM Déclenchement attaque speciale Tour CRAZY.\n";
+
+            if(special_ready) {
+                special_attack(enemy);
+                special_ready = false;
+                hit_counter = 0;
+            }
+        }
     }
 
     // enemy->takeDamage(40);
     // cout << "CrazyTower attaque de manière imprévisible!\n";
 }
+
+
+
 
 void CrazyTower::special_attack(Enemy *enemy)
 {
