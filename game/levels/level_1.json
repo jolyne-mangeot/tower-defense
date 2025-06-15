@@ -1,6 +1,6 @@
 {
   "number_of_checkpoints" : 12,
-  "number_of_turrets" : 6,
+  "number_of_towers" : 6,
   "number_of_enemies" : 30,
   "checkpoints_coordinates" : {
     "0" : {"x" : 45, "z" : 5},
@@ -16,7 +16,7 @@
     "10" : {"x" : 55, "z" : 25},
     "11" : {"x" : 55, "z" : 5}
   },
-  "turrets_coordinates" : {
+  "towers_coordinates" : {
     "0" : {"x" : 35, "z" : 15},
     "1" : {"x" : 25, "z" : 35},
     "2" : {"x" : 25, "z" : 65},
@@ -27,7 +27,7 @@
   "number_of_waves" : 3,
   "wave_1" : {
     "spawn_amount" : 5,
-    "spawn_interval" : 7,
+    "spawn_interval" : 5,
     "spawn_order" : {
       "1" : 0,
       "2" : 0,

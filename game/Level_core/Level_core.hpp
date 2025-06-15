@@ -7,7 +7,6 @@
 
 #include "utils.hpp"
 #include "game_structs.hpp"
-// #include "tower.h"
 
 class Level_wave;
 class User_data;
@@ -15,31 +14,25 @@ class User_data;
 class Level_core {
 
 public:
-    int number_of_checkpoints{};
-    shared_ptr<vector<array<int, 2>>> checkpoints_coordinates;
-
-    int number_of_turrets{};
-    vector<array<int, 2>> turrets_coordinates = {};
-
-    int current_wave_id{0};
-    weak_ptr<Level_wave> current_wave_pointer;
-
-    int number_of_enemies{};
-    int number_of_waves{};
-    int enemies_through{0};
-    vector<level_wave_info> waves = {};
-
     weak_ptr<Level_core> self_pointer;
     weak_ptr<User_data> user_data_ptr;
+    enemy_factories_weak_ptrs factories_weak_ptrs;
 
-    enemy_factories_weak_ptrs factories_weak_ptrs{};
-    vector<weak_ptr<Enemy>> enemies_weak_ptrs{};
+    int number_of_checkpoints{};
+    vector<array<int, 2>> checkpoints_coordinates = {};
+
+    int number_of_towers{};
+    vector<array<int, 2>> towers_coordinates = {};
+
+    int current_wave_id{1};
+    weak_ptr<Level_wave> current_wave_pointer;
+
+    int number_of_waves{};
+    vector<level_wave_info> waves = {};
+    int number_of_enemies{};
+
 
     explicit Level_core(const string& level_json_path);
-
-    ~Level_core() {
-        checkpoints_coordinates.reset();
-    }
 };
 
 #endif //LEVEL_CORE_HPP
