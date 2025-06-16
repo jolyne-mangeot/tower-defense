@@ -23,6 +23,7 @@ using std::endl;
 int main(int argc, char const *argv[])
 {   
     cout<<"TESTING 123"<<endl;
+     std::cout << "\t\tTEst de la lune.\n";
     EnemyFactory* enemy_factory = new EnemyFactory();
     EnemyFactory* flash_factory = new FlashFactory();
     EnemyFactory* boss_factory = new BossFactory();
@@ -47,6 +48,8 @@ int main(int argc, char const *argv[])
     standard->presentYourself();
 
     cout<<endl<<endl;
+   
+    
 
     std::vector<std::array<int,2>> checkpoints;
     // for (int i = 0; i < 10; i++) {

@@ -14,8 +14,8 @@ private:
 
 public:
     AtomicTower();
-    void attack(Enemy *enemy) override;
-    void special_attack(Enemy *enemy) override;
+    void attack(Enemy *enemy);
+    void special_attack(Enemy *enemy);
     void buy() override;
     void upgrade() override;
 };

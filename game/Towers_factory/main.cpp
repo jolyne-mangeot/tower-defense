@@ -31,7 +31,12 @@ int main()
     Enemy* flash = flash_Factory->createEnemy(new UpMovement);
     Enemy* tank = tank_factory->createEnemy(new UpMovement);
 
-    Tower* tower = TowerFactory::createTower(BASIC);
+    Tower* tower = TowerFactory::createTower(ATOMIC);
+
+   
+    Tower* tower1 = TowerFactory::createTower(BASIC);
+    Tower* tower2 = TowerFactory::createTower(CRAZY);
+     Tower* tower3 = TowerFactory::createTower(BASIC);
     tower->x = 465;
     tower->y = 240;
 

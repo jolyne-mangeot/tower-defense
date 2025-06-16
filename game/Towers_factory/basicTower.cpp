@@ -23,19 +23,26 @@ void BasicTower::attack(Enemy *enemy) {
         std::cout<<"\t\tHP enemy : "<<enemy->getHp()<<endl;
     }
 }
-void BasicTower::buy()
-{
+void BasicTower::buy() {
     basic_tower_count++;
 
-    float multiplier = 1.0f + cost_multiplier * (basic_tower_count - 1);
-    int final_cost = static_cast<int>(base_cost * multiplier);
-    cost = final_cost;
+    int final_cost = 0;
 
+    // La première tour est gratuite
+    if (basic_tower_count == 1) {
+        final_cost = 0;
+    } else {
+        float multiplier = 1.0f + cost_multiplier * (basic_tower_count - 2);
+        final_cost = static_cast<int>(base_cost * multiplier);
+    }
+
+    cost = final_cost;
     spent_money_count += final_cost;
 
-    cout << "Basic Tour achetée pour " << final_cost << " unités. ";
-    cout << "Total dépensé : " << spent_money_count << endl;
+    std::cout << "Basic Tour achetée pour " << final_cost << " unités. ";
+    std::cout << "Total dépensé : " << spent_money_count << std::endl;
 }
+
 
 void BasicTower::upgrade()
 {

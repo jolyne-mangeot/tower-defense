@@ -2,19 +2,15 @@
 #ifndef ATOMICTOWERFACTORY_H
 #define ATOMICTOWERFACTORY_H
 
-// #include "TowerFactory.h"
-// #include "AtomicTower.h"
 #include "tower.h"
-#include "CrazyTower.h"
+#include "towerFactory.h"
 
 class AtomicTowerFactory : public TowerFactory
 {
 public:
-    Tower *createTower() override
-    {
+    virtual Tower *createTower() = 0;
+     virtual ~AtomicTowerFactory() = default;
 
-        return new AtomicTower();
-    }
 };
 
 #endif

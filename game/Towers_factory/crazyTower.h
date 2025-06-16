@@ -13,10 +13,10 @@ private:
 
 public:
     CrazyTower();
-    void attack(Enemy *enemy) override;
-    void special_attack(Enemy *enemy) override;
-    void buy() override;
-    void upgrade() override;
+    void attack(Enemy *enemy);
+    void special_attack(Enemy *enemy) ;
+    void buy();
+    void upgrade();
 };
 
 #endif
