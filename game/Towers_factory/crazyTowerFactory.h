@@ -1,21 +1,14 @@
-
-// CrazyTowerFactory.h
+// TowerFactory.h
 #ifndef CRAZYTOWERFACTORY_H
 #define CRAZYTOWERFACTORY_H
-
 #include "TowerFactory.h"
-#include "CrazyTower.h"
+#include "tower.h"
+// #include "crazyTower.h"
 
-
-class CrazyTowerFactory : public TowerFactory
-{
+class CrazyTowerFactory : public TowerFactory {
 public:
-    Tower *createTower() override
-    {
-        // Tower *tower = new CrazyTower();
-
-        return new CrazyTower();
-        }
+    virtual Tower* createTower() = 0;
+    virtual ~CrazyTowerFactory() = default;
 };
 
 #endif
