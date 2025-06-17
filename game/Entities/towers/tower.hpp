@@ -10,7 +10,7 @@ class Tower
 protected:
     int damage{20};
     int tower_level{0};
-    int shooting_speed{1};
+    float shooting_speed{1};
     float perimeter{10.5f};
     int special_charge{5};
 
@@ -38,7 +38,7 @@ public:
         return tower_level;
     }
 
-    int get_shooting_speed() const {
+    float get_shooting_speed() const {
         return shooting_speed;
     }
 

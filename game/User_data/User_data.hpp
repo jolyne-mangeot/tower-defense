@@ -18,9 +18,9 @@ public:
     int current_level{1};
     vector<wave_results> waves_outcomes;
 
-    array<int, 3> towers_base_price{120,280,600};
+    array<int, 3> towers_base_price{120,320,800};
 
-    array<int, 3> towers_actual_prices{120,280,600};
+    array<int, 3> towers_actual_prices{120,320,800};
 
     array<int, 3> towers_bought{0,0,0};
 

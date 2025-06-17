@@ -9,7 +9,6 @@ class Enemy;
 class Flash : public Enemy {
 public:
     Flash(IMovementStrategy* strategy, float x, float y);
-    void presentYourself();
 };
 
 
