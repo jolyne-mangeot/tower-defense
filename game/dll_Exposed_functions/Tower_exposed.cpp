@@ -45,7 +45,7 @@ extern "C" {
     }
 
     __declspec(dllexport) void upgrade_tower(const shared_ptr<Pointer_manager> &manager, Tower *tower,
-            int *tower_level, int *shooting_speed, int *special_charge) {
+            int *tower_level, float *shooting_speed, int *special_charge) {
         cout << "Tower upgraded to level " << to_string(*tower_level + 1) << " !" << endl;
         if (tower->get_level() < 3) {
 
@@ -79,8 +79,9 @@ extern "C" {
                 return 1;
             }
             tower->attack(enemy);
+            return 0;
         }
-        return 0;
+        return -1;
     }
 
 }

@@ -17,9 +17,9 @@ public:
     int enemy_type_id{0};
     bool enemy_spawned{false};
     int current_following_checkpoint{1};
-    int revenue{80};
+    int revenue{70};
     int health_points{100};
-    virtual int move(const vector<array<int,2>>& checkpoints);
+    virtual int move(const vector<array<int,2>>& checkpoints, float time_multiplicator);
     void set_type_id(int id);
     void takeDamage(int damage);
     float getHp() const;
@@ -33,11 +33,9 @@ public:
     void setY(float y_movement);
     void setMovement(IMovementStrategy* new_movement_strategy);
 
-    virtual void presentYourself();
-
 private:
     float x{0}, y{0};
-    float speed{0.005f}; // pixel per frame
+    float speed{2.0f};
     IMovementStrategy* movement_strategy;
     void changeDirection(array<int, 2> checkpoint);
 };

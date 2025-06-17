@@ -34,10 +34,12 @@ void Tower::buy_tower() {
 void Tower::upgrade_tower()
 {
     tower_level ++;
-    damage *=2;
-    shooting_speed *=2;
+
+    damage +=10;
+    shooting_speed +=0.5f;
     perimeter +=1;
     special_charge -=1;
+
     hit_counter = 0;
     special_ready = false;
 }
