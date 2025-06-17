@@ -2,7 +2,7 @@
 
 Il est possible d'[installer gratuitement Visual Studio](https://visualstudio.microsoft.com/fr/downloads/), ce qui prendra du temps et de l'espace disque (env. 30Go). Notez à bien cocher les différents outils référant à C++ ! (chercher l'icône référant ici à C++ BuildTools, ainsi que le paquet faisant référence à Unity, et tout autre que vous trouveriez pertinent, notamment dans l'onglet paquets individuels, à votre préférence)
 
-![img.png](paquets-visual-studio.png)
+![img.png](DOCS/paquets-visual-studio.png)
 
 Lorsque l'installation de Visual Studio tourne, nous avons l'occasion de voir la structure d'une compilation de librairie .dll. Celle-ci se fait, par chance, à l'aide d'un fichier Cmakelist, permettant ainsi la création d'un fichier .dll ainsi que, dépendant de nos besoins, d'un fichier main.cpp que l'on pourrait tester avec nos classes, structures, etc. Nous ne verrons ici toutefois uniquement la compilation d'un fichier .dll, voici d'ailleurs un template de Cmakelists.
 
@@ -54,11 +54,11 @@ Ce projet, d'ailleurs, que nous allons débuter. Pour ce faire, il suffit de rep
 
 Dans l'interface du projet, que l'on devra prendre le temps de découvrir, il faudra dans l'onglet "Projet" entrer dans le dossier "Assets", et y créer un dossier nommé "Plugins" :
 
-![img.png](dossiers-unity.png)
+![img.png](DOCS/dossiers-unity.png)
 
 Dedans, un simple clique droit et "Import New Asset..." nous permettra de sélectionner notre fichier .dll compilé plus tôt, et il y apparaîtra :
 
-![img.png](import-plugin-unity.png)
+![img.png](DOCS/import-plugin-unity.png)
 
 Ce fichier en lui-même, toutefois, ne sera pas lu automatiquement par Unity, ainsi qu'il ne saura pas ce que celui-ci contient. C'est alors qu'il nous faut créer un Script en C# capable de lire et mettre cette librairie en marche. En retournant dans le dossier Assets, il suffit de créer un dossier Scripts, et, à l'intérieur, créer un "Mono Behaviour Script" nommé "PluginTest", un script référant à un comportement, et que l'on peut intégrer à un objet en jeu. À l'intérieur, il s'agira donc de faire la passerelle entre les langages, et de coder un programme qu'Unity pourra lire.
 
@@ -87,10 +87,10 @@ En utilisant les namespace, on crée une classe fille de MonoBehavior, et l'on y
 
 Pour appliquer notre script de comportement à un objet, il est nécessaire d'en créer un : dans le coin supérieur gauche, où se trouvent nos scènes, nos objets et la caméra, il suffit de créer un nouvel objet vide, que l'on nommera test :
 
-![img.png](creation-objet-test-unity.png)
+![img.png](DOCS/creation-objet-test-unity.png)
 
 En faisant glisser depuis le fichier script affiché en bas et sur notre élément dans la liste d'objet, ou en le sélectionnant afin de le modifier dans l'inspecteur (à droite et sur l'image), il est possible d'ajouter notre script comme composant à l'objet :
 
-![img.png](script-sur-objet-unity.png)
+![img.png](DOCS/script-sur-objet-unity.png)
 
 Lorsque le script est ajouté, il est alors possible de lancer notre jeu et voir le résultat dans la console (deuxième onglet à "Project", en bas de la preview).
