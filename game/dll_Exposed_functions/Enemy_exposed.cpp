@@ -18,19 +18,29 @@ extern "C" {
         return 0;
     }
 
-    __declspec(dllexport) void enemy_spawned(Enemy* enemy) {
-        enemy->enemy_spawned = true;
-    }
-
-    __declspec(dllexport) int enemy_move(const shared_ptr<Pointer_manager> &manager, Enemy* enemy) {
-        const int movement_status = enemy->move(manager->level_core_ptr->checkpoints_coordinates);
-        return movement_status;
+    __declspec(dllexport) int get_enemy_coordinates(const Enemy* enemy, float *x, float *y) {
+        if (enemy != nullptr) {
+            *x = enemy->getX();
+            *y = enemy->getY();
+            return 1;
+        }
+        return 0;
     }
 
     __declspec(dllexport) void get_enemy_status(const Enemy* enemy, float*x, float*y, float *health) {
         *x = enemy->getX();
         *y = enemy->getY();
         *health = enemy->getHp();
+    }
+
+    __declspec(dllexport) void enemy_spawned(Enemy* enemy) {
+        enemy->enemy_spawned = true;
+    }
+
+    __declspec(dllexport) int enemy_move(
+            const shared_ptr<Pointer_manager> &manager, Enemy* enemy, const float time_factor) {
+        const int movement_status = enemy->move(manager->level_core_ptr->checkpoints_coordinates, time_factor);
+        return movement_status;
     }
 
     __declspec(dllexport) int recover_enemy_type(const Enemy* enemy) {

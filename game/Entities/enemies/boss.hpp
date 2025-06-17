@@ -8,7 +8,6 @@ class Enemy;
 class Boss : public Enemy {
 public:
     Boss(IMovementStrategy* strategy, float x, float y);
-    void presentYourself() override;
 };
 
 #endif

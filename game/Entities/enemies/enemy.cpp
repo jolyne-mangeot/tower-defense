@@ -28,9 +28,11 @@ void Enemy::set_type_id(const int id) {
 }
 
 
-int Enemy::move(const vector<array<int,2>>& checkpoints)
+int Enemy::move(const vector<array<int,2>>& checkpoints, float time_multiplicator)
 {
     const float usual_speed = this->speed;
+
+    setSpeed(this->speed * time_multiplicator);
     int movement_status = -1;
 
     if (x != checkpoints.at(checkpoints.size() -1).at(0)
@@ -115,12 +117,4 @@ void Enemy::changeDirection(const std::array<int, 2> checkpoint)
     } else if (checkpoint[1] < this->y) {
         this->movement_strategy = new DownMovement;
     }
-}
-
-void Enemy::presentYourself()
-{
-    cout<<"Je suis un ennemi classique"<<endl;
-    cout<<"J'ai "<<this->getHp()<<" HP"<<endl;
-    cout<<this->getSpeed()<<" de vitesse"<<endl;
-    cout<<"Je rapporte : "<<this->revenue<<" gold"<<endl;
 }
