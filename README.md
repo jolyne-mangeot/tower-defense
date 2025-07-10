@@ -29,9 +29,21 @@ Encounter a bug or crash ? Don't hesitate to create an issue on this github in t
 
 ## Credits
 
-"That Zen Moment " Kevin MacLeod (incompetech.com)
+#### Decors and Props
 
-"Dewdrop Fantasy" Kevin MacLeod (incompetech.com)
+"Tower Defense Kit" Kenney ([OpenGameArt.Org](https://opengameart.org/content/tower-defense-kit)
+
+#### Enemies models
+
+"RPG Monster Partners PBR Polyart" Dungeon Mason ([Unity Asset Store](https://assetstore.unity.com/packages/3d/characters/creatures/rpg-monster-partners-pbr-polyart-168251?aid=1100liZev))
+
+"RPG Monster Duo PBR Polyart" Dungeon Mason ([Unity Asset Store](https://assetstore.unity.com/packages/3d/characters/creatures/rpg-monster-duo-pbr-polyart-157762?aid=1100liZev))
+
+#### Musics
+
+"That Zen Moment " Kevin MacLeod ([incompetech.com](https://incompetech.com/music/royalty-free/music.html))
+
+"Dewdrop Fantasy" Kevin MacLeod ([incompetech.com](https://incompetech.com/music/royalty-free/music.html))
 
 Licensed under Creative Commons: By Attribution 4.0 License
 http://creativecommons.org/licenses/by/4.0/
