@@ -21,11 +21,11 @@ Encounter a bug or crash ? Don't hesitate to create an issue on this github in t
 
 ## Our team
 
-[Jolyne](https://github.com/jolyne-mangeot)
+[Jolyne](https://github.com/jolyne-mangeot) : Game conception and Unity integration
 
-[Adeline](https://github.com/AdelinePat)
+[Adeline](https://github.com/AdelinePat) : Code structure and Design Patterns
 
-[Florence](https://github.com/Florence-Navet)
+[Florence](https://github.com/Florence-Navet) : Entity instanciation and Optimization
 
 ## Credits
 
